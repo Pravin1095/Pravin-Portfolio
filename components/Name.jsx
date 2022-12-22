@@ -37,7 +37,7 @@ function Name() {
           </ul>
         </div>
       </nav>
-      <h1 className="name">I'm Pravin.</h1>
+      <h1 className="name">I am Pravin.</h1>
       <h2 className="name">Welcome!</h2>
     </div>
   );

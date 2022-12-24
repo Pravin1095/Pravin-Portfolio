@@ -55,8 +55,19 @@
   .skills-h2 {
     margin-top: 50px;
   }
-  .total-skills {
-    padding: 1rem 1rem;
-    display: inline-block;
+  
+  .total-skills{
+    padding-left:100px;
+  }
+
+  .pad-style{
+    padding:20px 0;
+  }
+
+  h5{
+    display:inline;
+    padding-left : 20px;
+    padding-top:20px;
+
   }
   

@@ -24,7 +24,7 @@ function Skills() {
 
       <div className="col-lg-4">
         <h3>BackEnd Technologies</h3>
-        <div className='pad-style'><FontAwesomeIcon icon={faPython}></FontAwesomeIcon><h5>Python</h5></div>
+        <div className='pad-style'><FontAwesomeIcon icon={faPython} style='width:50px;'></FontAwesomeIcon><h5>Python</h5></div>
         <div className='pad-style'><FontAwesomeIcon icon={faJava}></FontAwesomeIcon><h5>Java Basics</h5></div>
         
       </div>

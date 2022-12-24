@@ -1,26 +1,62 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+/* Navigation Bar */
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.navbar-brand {
+    font-family: "Ubuntu";
+    font-size: 2.5rem;
+    font-weight: bold;
   }
-  body {
-    color: white;
-    background: black;
+
+  .nav-item {
+    padding: 0 18px;
   }
-}
+
+  #name .container-fluid{
+    padding:7% 15% 3%
+  }
+
+  
+  h1 {
+    margin: 0 auto;
+    font-family: "Sacramento", cursive;
+    font-size: 90px;
+    color: #ffffff;
+    line-height: 2;
+    text-align: center;
+  }
+  .name {
+    margin-top: 100px;
+  }
+  h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 40px;
+    color: #66bfbf;
+    font-weight: normal;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+  .top {
+    background-color: #ff4c68;
+  }
+  
+  .my-photo {
+    display: block;
+    margin: 50px auto;
+    width: 200px;
+    border-radius: 50%;
+  }
+  .about {
+    font-size: 30px;
+  }
+  .skill {
+    background-color: #fed8b1;
+    margin-top: 50px;
+    padding-top: 10px;
+  }
+  .skills-h2 {
+    margin-top: 50px;
+  }
+  .total-skills {
+    padding: 1rem 1rem;
+    display: inline-block;
+  }
+  

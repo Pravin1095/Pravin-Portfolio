@@ -2,22 +2,16 @@ import React from "react";
 
 function Name() {
   return (
-    <div className="top">
+    <section className='top' id='name'>
+    <div className="container-fluid">
       <nav class="navbar navbar-expand-lg navbar-light ">
-        <a class="navbar-brand" href="#">
-          Navbar
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarTogglerDemo"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      <a className="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo">
-          <ul class="navbar-nav mr-auto">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
             <li class="nav-item">
               <a class="nav-link" href="#">
                 About
@@ -40,6 +34,7 @@ function Name() {
       <h1 className="name">I am Pravin.</h1>
       <h2 className="name">Welcome!</h2>
     </div>
+    </section>
   );
 }
 export default Name;

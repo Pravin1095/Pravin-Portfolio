@@ -8,7 +8,8 @@ import { faHtml5,faCss3Alt,faJs,faReact,faPython,faJava,faClo} from '@fortawesom
 
 function Skills() {
   return (
-    <div className="skill">
+    <section id="skill">
+    <div className='container-fluid'>
       <h2 className="skills-h2">My Skills</h2>
       <div className='row total-skills'>
       <div className="col-lg-4">
@@ -24,7 +25,7 @@ function Skills() {
 
       <div className="col-lg-4">
         <h3>BackEnd Technologies</h3>
-        <div className='pad-style'><FontAwesomeIcon icon={faPython} style='width:50px;'></FontAwesomeIcon><h5>Python</h5></div>
+        <div className='pad-style'><FontAwesomeIcon icon={faPython} style={{width:'50px'}}></FontAwesomeIcon><h5>Python</h5></div>
         <div className='pad-style'><FontAwesomeIcon icon={faJava}></FontAwesomeIcon><h5>Java Basics</h5></div>
         
       </div>
@@ -33,7 +34,8 @@ function Skills() {
         <div className='pad-style'><FontAwesomeIcon icon={faCloud}></FontAwesomeIcon><h5>Google Cloud Basics</h5></div>
       </div>
       </div>
-    </div>
+      </div>
+    </section>
   );
 }
 export default Skills;

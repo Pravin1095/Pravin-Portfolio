@@ -1,14 +1,11 @@
 /* Navigation Bar */
 
-.navbar-brand {
-    font-family: "Ubuntu";
-    font-size: 2.5rem;
-    font-weight: bold;
-  }
 
   .nav-item {
     padding: 0 18px;
   }
+
+  /*Name component */
 
   #name .container-fluid{
     padding:7% 15% 3%
@@ -16,11 +13,10 @@
 
   
   h1 {
-    margin: 0 auto;
+    
     font-family: "Sacramento", cursive;
     font-size: 90px;
     color: #ffffff;
-    line-height: 2;
     text-align: center;
   }
   .name {
@@ -30,6 +26,7 @@
     font-family: "Montserrat", sans-serif;
     font-size: 40px;
     color: #66bfbf;
+    line-height:2;
     font-weight: normal;
     padding-bottom: 10px;
     text-align: center;
@@ -38,6 +35,8 @@
     background-color: #ff4c68;
   }
   
+/*Intro component */
+
   .my-photo {
     display: block;
     margin: 50px auto;
@@ -47,13 +46,20 @@
   .about {
     font-size: 30px;
   }
-  .skill {
+
+  /* Skill Component */
+
+  #skill {
     background-color: #fed8b1;
-    margin-top: 50px;
-    padding-top: 10px;
+    
   }
-  .skills-h2 {
-    margin-top: 50px;
+
+  #skill .container-fluid{
+    padding:7% 15% 3%
+  }
+ 
+  .skills-h2{
+    padding-bottom:50px;
   }
   
   .total-skills{
@@ -70,4 +76,57 @@
     padding-top:20px;
 
   }
+
+  /* Contact component */
+
+  #contact{
+    background-color:#E4F9F5
+  }
+
+#contact .container-fluid{
+  padding:7% 15% 3%
+}
+
+  .bottom{
+    margin-top:50px;
+  }
+
+  .mail-buttton{
+    margin-top:75px;
+
+  }
+
+
+  .mobile{
+    padding-top:75px;
+
+    
+  }
   
+ #contact .container-fluid{
+  padding:3% 40% 3% 32%
+ }
+
+
+
+/* Contact2 component */
+
+#contact2{
+  background-color:#66BFBF;
+}
+
+#contact2 .container-fluid{
+  padding:3% 32% 3% 40%
+ }
+
+ .footer-link{
+  padding:0 20px;
+ }
+
+ .copyright{
+  padding-top:50px;
+  padding-left:50px;
+ }
+
+
+

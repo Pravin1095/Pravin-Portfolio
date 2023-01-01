@@ -5,6 +5,11 @@
     padding: 0 18px;
   }
 
+
+  .fcolor{
+    color:white;
+  }
+
   /*Name component */
 
   #name .container-fluid{
@@ -15,21 +20,31 @@
   h1 {
     
     font-family: "Sacramento", cursive;
-    font-size: 90px;
+    
     color: #ffffff;
     text-align: center;
+    font-weight: bold;
   }
+
+  .fontsize{
+    font-size: 6rem;
+  }
+
   .name {
     margin-top: 100px;
   }
   h2 {
     font-family: "Montserrat", sans-serif;
-    font-size: 40px;
+    
     color: #66bfbf;
-    line-height:2;
     font-weight: normal;
     padding-bottom: 10px;
     text-align: center;
+  }
+
+  .fontsizew{
+    font-size: 2.5rem;
+
   }
   .top {
     background-color: #ff4c68;
@@ -75,6 +90,47 @@
     padding-left : 20px;
     padding-top:20px;
 
+  }
+
+  /*Education Component */
+
+  .Edu{
+    text-align:center;
+    
+  }
+
+ 
+  .hor-line
+  {
+  background-color:white; 
+  width:5%;
+  border-style:none;
+  border-top-style:dotted;
+  border-color:grey;
+  border-width:5px;
+  margin:0 auto;
+  }
+
+  .grad-cap{
+    padding:20px 0;
+   
+    text-align:center;
+  }
+
+  .flex-container{
+    display:flex;
+    justify-content:space-around;
+    margin:20px 0;
+    
+    
+  }
+
+ 
+
+  .year{
+    text-align:right;
+    margin-left:50px;
+    
   }
 
   /* Contact component */

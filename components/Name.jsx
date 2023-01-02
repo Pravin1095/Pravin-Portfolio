@@ -13,26 +13,26 @@ function Name() {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link fcolor" href="#intro">
                 About
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link fcolor" href="#skill">
                 Skills
               </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link fcolor" href="#contact">
                 Contact
               </a>
             </li>
           </ul>
         </div>
       </nav>
-      <h1 className="name">I am Pravin.</h1>
-      <h2 className="name">Welcome!</h2>
+      <h1 className='name fontsize'>I am Pravin.</h1>
+      <h2 className='name fontsizew'>Welcome!</h2>
     </div>
     </section>
   );

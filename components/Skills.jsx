@@ -10,6 +10,7 @@ function Skills() {
   return (
     <section id="skill">
     <div className='container-fluid'>
+   
       <h2 className="skills-h2">My Skills</h2>
       <div className='row total-skills'>
       <div className="col-lg-4">

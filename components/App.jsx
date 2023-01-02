@@ -1,7 +1,6 @@
 import React from "react";
 import Name from "./Name.jsx";
 import Intro from "./Intro.jsx";
-import Skills from "./Skills.jsx";
 import BCarousel from "./BCarousel.jsx";
 import Education from './Education.jsx'
 import Contact from './Contact.jsx'

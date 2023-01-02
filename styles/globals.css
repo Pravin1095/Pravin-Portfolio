@@ -108,7 +108,8 @@
   border-top-style:dotted;
   border-color:grey;
   border-width:5px;
-  margin:0 auto;
+  margin:20px auto;
+  
   }
 
   .grad-cap{
@@ -119,17 +120,18 @@
 
   .flex-container{
     display:flex;
-    justify-content:space-around;
+    justify-content:space-between;
     margin:20px 0;
-    
+
     
   }
-
+  .school{
+    margin-left:20px;
+  }
  
 
   .year{
-    text-align:right;
-    margin-left:50px;
+    margin-right:20px;
     
   }
 

@@ -1,6 +1,7 @@
 import '../styles/globals.css'
 
-// import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap.css';
+
 import { useEffect } from "react";
 import bootstrap from 'bootstrap'
 import Head from 'next/head'
@@ -11,7 +12,10 @@ function MyApp({ Component, pageProps }) {
 
   // useEffect(() => {
   //  require("bootstrap/dist/js/bootstrap.bundle.min.js");
-  //}, []); 
+  // }, []); 
+  useEffect(() => {
+    import('bootstrap')
+  }, [])
 
   return (
     <div>

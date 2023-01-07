@@ -3,7 +3,7 @@ import React from 'react'
 const Footer=()=>{
     return(
         <section id='contact2'>
-<div class="bottom-container container-fluid">
+<div className="bottom-container container-fluid">
 <div>
      <a className='footer-link' href="">LinkedIn</a>
      <a className='footer-link' href="">Twitter</a>

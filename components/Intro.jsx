@@ -1,7 +1,7 @@
 import React from "react";
 import Image from 'next/image'
 
-function Intro() {
+const Intro=()=> {
   return (
     <section id='intro'>
     <div className="profile">

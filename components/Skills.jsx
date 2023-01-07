@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCloud } from '@fortawesome/free-solid-svg-icons';
 import { faHtml5,faCss3Alt,faJs,faReact,faPython,faJava,faClo} from '@fortawesome/free-brands-svg-icons';
 
-function Skills() {
+const Skills=()=> {
   return (
     <section id="skill">
     <div className='container-fluid'>

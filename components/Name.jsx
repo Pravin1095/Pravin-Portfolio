@@ -1,30 +1,30 @@
 import React from "react";
 
-function Name() {
+const Name=()=> {
   return (
     <section className='top' id='name'>
     <div className="container-fluid">
-      <nav class="navbar navbar-expand-lg navbar-light ">
+      <nav className="navbar navbar-expand-lg navbar-light ">
       <a className="navbar-brand" href="#"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
     </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link fcolor" href="#intro">
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav ms-auto">
+            <li className="nav-item">
+              <a className="nav-link fcolor" href="#intro">
                 About
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link fcolor" href="#skill">
+            <li className="nav-item">
+              <a className="nav-link fcolor" href="#skill">
                 Skills
               </a>
             </li>
 
-            <li class="nav-item">
-              <a class="nav-link fcolor" href="#contact">
+            <li className="nav-item">
+              <a className="nav-link fcolor" href="#contact">
                 Contact
               </a>
             </li>

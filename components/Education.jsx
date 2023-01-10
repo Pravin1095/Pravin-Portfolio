@@ -20,6 +20,9 @@ const Educations=()=>{
 }
 
 const Education = (props) => {
+    function attack(){
+        props.sendAttack('This is from child(education) component')
+    }
     return (
         <section id='education'>
             <div className='flex-container'>
@@ -30,7 +33,7 @@ const Education = (props) => {
                 <div className='year'>
                     <p>{props.Year}</p>
                 </div></div>
-
+            <button onClick={attack}>Button</button>
 
             <hr className='hor-line'></hr>
 

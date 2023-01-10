@@ -7,6 +7,7 @@ import { faCloud, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 function BCarousel() {
   const toggleCarousel = (action) => {
     // const { Carousel } = bootstrap;
+
     // const carousel = new Carousel("#carouselExampleControls");
   //   if (action === "next") {
 
@@ -14,6 +15,7 @@ function BCarousel() {
   //   } else {
   //     carousel.prev();
   //   }
+
   };
   return (
     <section id='bcarousel'>

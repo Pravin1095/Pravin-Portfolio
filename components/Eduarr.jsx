@@ -5,6 +5,7 @@ const edu=[
         institute:'Holy Cross Matriculation Higher Secondary School',
         school:'-School',
         year:'2006-2018'
+        
     },
     {
         id:2,

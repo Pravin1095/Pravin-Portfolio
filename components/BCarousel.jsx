@@ -9,9 +9,9 @@ function BCarousel() {
     // const { Carousel } = bootstrap;
     const carousel = new Carousel("#carouselExampleControls");
     if (action === "next") {
-
       carousel.next(); 
-    } else {
+    } 
+    else {
       carousel.prev();
     }
   };

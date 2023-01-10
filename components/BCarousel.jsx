@@ -1,19 +1,19 @@
 import React from "react";
 import Skills from './Skills.jsx'
-import { Carousel } from 'bootstrap'
+//import { Carousel } from 'bootstrap'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCloud, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 function BCarousel() {
   const toggleCarousel = (action) => {
     // const { Carousel } = bootstrap;
-    const carousel = new Carousel("#carouselExampleControls");
-    if (action === "next") {
+    // const carousel = new Carousel("#carouselExampleControls");
+  //   if (action === "next") {
 
-      carousel.next(); 
-    } else {
-      carousel.prev();
-    }
+  //     carousel.next(); 
+  //   } else {
+  //     carousel.prev();
+  //   }
   };
   return (
     <section id='bcarousel'>

@@ -1,6 +1,7 @@
 import React from "react";
 import Name from "./Name.jsx";
 import Intro from "./Intro.jsx";
+import Skills from './Skills.jsx'
 import BCarousel from "./BCarousel.jsx";
 import Educations from './Education.jsx'
 import Contact from './Contact.jsx'
@@ -16,7 +17,8 @@ const App = () => {
     <div className="App">
       <Name />
       <Intro />
-      <BCarousel />
+      <Skills />
+      {/* <BCarousel /> */}
       <Educations />
       <h2>My Education!</h2>
       <div className='grad-cap'><FontAwesomeIcon icon={faGraduationCap} style={{ width: '10%', height: '5%' }}></FontAwesomeIcon></div>

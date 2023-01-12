@@ -39,8 +39,8 @@ const Education = ({ title, icon, earray }) => {
             <div className='grad-cap'><FontAwesomeIcon icon={icon} style={{ width: '10%', height: '5%' }}></FontAwesomeIcon></div>
 
             <div>{earray.map(
-                (edua) => {
-                    return <React.Fragment><div className='flex-container'><div className='school'>
+                (edua,index) => {
+                    return <React.Fragment key={index}><div className='flex-container'><div className='school'>
                         <a href={edua.link}>{edua.institute}</a>
                         <p>{edua.school}</p>
                     </div>

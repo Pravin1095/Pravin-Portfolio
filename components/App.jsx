@@ -1,31 +1,50 @@
 import React from "react";
-import Name from "./Name.jsx";
-import Intro from "./Intro.jsx";
+import NameParent from "./Name.jsx";
+import IntroParent from "./Intro.jsx";
 import Skills from './Skills.jsx'
 import BCarousel from "./BCarousel.jsx";
 import Educations from './Education.jsx'
-import Contact from './Contact.jsx'
-import Footer from './Footer.jsx'
+import ContactParent from './Contact.jsx'
+import FooterParent from './Footer.jsx'
 import Eduarr from './Eduarr.jsx'
-import ControlledCarousel from "./RCarousel.jsx";
+
+import Example from "./OffCanvasNav.jsx";
+import Trainee from "./Trainee.jsx";
+import Home from "./Home.jsx";
+import app_arr from "./apparr.js";
+import HobbyParent from "./Hobbies.jsx";
+
+import Router from "react-router-dom"
+import Switch from "react-router-dom"
+import Route from "react-router-dom"
+import Redirect from "react-router-dom"
+ 
 
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGraduationCap } from '@fortawesome/free-solid-svg-icons';
+
 
 const App = () => {
   return (
     <div className="App">
-      <Name />
-      <Intro />
-      <Skills />
-      {/* <BCarousel /> */}
-      <Educations />
-      {/* <h2>My Education!</h2>
-      <div className='grad-cap'><FontAwesomeIcon icon={faGraduationCap} style={{ width: '10%', height: '5%' }}></FontAwesomeIcon></div> */}
+   <div>{app_arr.map(
+      (apps,index)=>
+      {
+        return <React.Fragment key={index}>
+       
+         {apps.child}
+       
+        </React.Fragment>
+      }
+    )}</div> 
+  {/* <Home />
+      
+      <IntroParent />
       <ControlledCarousel />
-      <Contact />
-      <Footer />
+      
+      <Educations />
+      <Trainee />
+      <ContactParent />
+      <FooterParent /> */}
     </div>
   );
 }

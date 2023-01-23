@@ -35,18 +35,23 @@ const Education = ({ title, icon, earray }) => {
     // }
     return (
         <div>
-            <h2>{title}</h2>
+            <h2 className='edu-h2'>{title}</h2>
             <div className='grad-cap'><FontAwesomeIcon icon={icon} style={{ width: '10%', height: '5%' }}></FontAwesomeIcon></div>
 
             <div>{earray.map(
                 (edua,index) => {
-                    return <React.Fragment key={index}><div className='flex-container'><div className='school'>
+                    return <React.Fragment key={index}>
+                    
+                    <div className='row container-fluid'>
+                    
+                    <div className='col-lg-6 school'>
                         <a href={edua.link}>{edua.institute}</a>
                         <p>{edua.school}</p>
                     </div>
-                        <div className='year'>
+                        <div className='col-lg-6 year'>
                             <p>{edua.year}</p>
-                        </div></div>
+                        </div>
+                        </div>
                         <hr className='hor-line'></hr></React.Fragment>
 
                 }

@@ -5,6 +5,37 @@
     padding: 0 18px;
   }
 
+  .nav-but{
+   margin-left:50px;
+    color:black;
+    width:75px;
+    height:75px;
+    background-color: #ff4c68;
+    border:0px;
+
+  }
+
+  .nav-buttons{
+    background-color:black;
+    color:white;
+    border-radius:100%;
+    border:solid 3px red ;
+    text-align:center;
+    font-size:3rem;
+    margin:5% 30% 5% 10%;
+    width:250px;
+    
+    
+  }
+
+  .bg-nav{
+    background-color: black;
+  }
+
+  .close-button{
+    margin-left:auto;
+  }
+
 
   .fcolor{
     color:white;
@@ -12,13 +43,27 @@
 
   /*Name component */
 
-  #name .container-fluid{
-    padding:7% 15% 3%
+  /* #name .container-fluid{
+    
+  } */
+
+  .top{
+    padding:10% 20% 1% 10%;
+    
   }
 
   
-  h1 {
+  /* h1 {
     
+    font-family: "Sacramento", cursive;
+    
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+  } */
+
+  .fontsize{
+    font-size: 6rem;
     font-family: "Sacramento", cursive;
     
     color: #ffffff;
@@ -26,24 +71,29 @@
     font-weight: bold;
   }
 
-  .fontsize{
-    font-size: 6rem;
-  }
-
   .name {
-    margin-top: 100px;
+    
+    margin-top:220px;
+   
   }
-  h2 {
+  /* h2 {
     font-family: "Montserrat", sans-serif;
     
     color: #66bfbf;
     font-weight: normal;
     padding-bottom: 10px;
     text-align: center;
-  }
+  } */
 
   .fontsizew{
     font-size: 2.5rem;
+    font-family: "Montserrat", sans-serif;
+    
+    color: #66bfbf;
+    font-weight: normal;
+    padding-bottom: 10px;
+    text-align: center;
+   
 
   }
   .top {
@@ -75,6 +125,8 @@
  
   .skills-h2{
     padding-bottom:50px;
+    text-align:center;
+    font-size:3rem;
   }
   
   .total-skills{
@@ -85,7 +137,15 @@
     padding:20px 0;
   }
 
-  h5{
+  .skill-head{
+    color:black;
+    font-size:3rem;
+  }
+
+  .skill-title{
+    font-family: "Montserrat", sans-serif;
+    font-size:2rem;
+    color:black;
     display:inline;
     padding-left : 20px;
     padding-top:20px;
@@ -94,10 +154,20 @@
 
   /*Education Component */
 
-  .Edu{
+  #education{
+    background-color: #fed8b1;
+    margin-bottom:20px;
+  }
+
+  .edu-h2{
+    text-align:center;
+    padding:50px 0 0;
+  }
+
+  /* .Edu{
     text-align:center;
     
-  }
+  } */
 
  
   .hor-line
@@ -109,31 +179,135 @@
   border-color:grey;
   border-width:5px;
   margin:20px auto;
+  padding-bottom:20px;
   
   }
 
   .grad-cap{
     padding:20px 0;
+    color:black;
    
     text-align:center;
   }
 
-  .flex-container{
-    display:flex;
-    justify-content:space-between;
-    margin:20px 0;
+  #education .container-fluid{
 
-    
+    padding:3% 10% 5%;
   }
-  .school{
-    margin-left:20px;
-  }
+   .school{
+    font-size:2rem;
+  } 
  
 
   .year{
-    margin-right:20px;
+   font-size:2rem;
+   text-align:right;
     
   }
+
+
+  /*  Hobby */
+
+  /* #hobby{
+    margin:10% 0;
+  } */
+
+
+  #hobby{
+    background-color:lightsalmon
+  }
+  #hobby .container-fluid{
+    padding:7% 15% 3%; 
+  }
+
+  .hobby-title{
+    text-align:center;
+    padding:50px 0 0;
+    font-size:3rem;
+
+  }
+
+  .l-img{
+    float:left;
+    margin-right:70px;
+    width:150px;
+    height:150px;
+  }
+
+  .r-img{
+    float:right;
+    margin-left:70px;
+    width:150px;
+    height:150px;
+  }
+
+  .hobby-description{
+    padding-top:30px;
+    
+  }
+
+  .hrow{
+    margin:0 0 10%;
+    
+  }
+  /* Resume */
+
+  #resumeid{
+    background-color: deeppink;
+    color:white;
+    
+ 
+  }
+
+
+
+  #resumeid .container-fluid{
+    padding:7% 30% 10% 30%
+  }
+
+  .res-title{
+    font-family:"Sacramento", cursive;;
+    font-size:4rem;
+    font-weight:bold;
+    height:1rem;
+    padding-bottom:50%;
+    text-align:center;
+  }
+
+  .resume-about{
+    font-family:'Montserrat', sans-serif;
+    font-size:1.5rem;
+    margin-top:50px;
+    /* text-align:left; */
+    margin-right:20px;
+    color:yellow
+  }
+
+  .resume-button{
+    margin:50% 20% 0;
+    text-align:center;
+    width:50%;
+    height:5%;
+    border-radius:15%;
+    background-color: skyblue;
+    color:black;
+    font-size:1.5rem;
+    
+    padding:10% 5%;
+   
+  }
+
+  /* Project */
+
+  #project .container-fluid{
+    padding:7% 30% 7% 30%
+  }
+
+  .project-title{
+    text-align:center;
+  }
+
+  
 
   /* Contact component */
 
@@ -145,18 +319,27 @@
   padding:7% 15% 3%
 }
 
+.contact-title{
+  text-align:center;
+  padding:10px 0 30px;
+}
+
   .bottom{
     margin-top:50px;
   }
 
-  .mail-buttton{
-    margin-top:75px;
+  .btn{
+    /* padding-top:5px; */
+    margin:10px 35% 0;
+    
 
   }
 
 
   .mobile{
+    /* display:inline; */
     padding-top:75px;
+    text-align:center;
 
     
   }
@@ -167,10 +350,10 @@
 
 
 
-/* Contact2 component */
+/* Footer component */
 
 #contact2{
-  background-color:#66BFBF;
+  background-color:#e0ebe8;;
 }
 
 #contact2 .container-fluid{
@@ -178,12 +361,17 @@
  }
 
  .footer-link{
-  padding:0 20px;
+  padding:0 20% 0 0;
+  font-size:2rem;
+  color:#45b29a;
+  text-align:center;
  }
 
  .copyright{
   padding-top:50px;
-  padding-left:50px;
+  
+  font-size:2rem;
+  text-align:center;
  }
 
 

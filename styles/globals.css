@@ -230,15 +230,13 @@
   .l-img{
     float:left;
     margin-right:70px;
-    width:150px;
-    height:150px;
+    
   }
 
   .r-img{
     float:right;
     margin-left:70px;
-    width:150px;
-    height:150px;
+    
   }
 
   .hobby-description{
@@ -311,10 +309,7 @@
     text-align:center;
   }
 
-  .project-img{
-    width:500px;
-    height:250px
-  }
+  
 
   .project-intro{
     font-family:'Montserrat', sans-serif;

@@ -1,16 +1,19 @@
 import React from 'react'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 const Project=()=>{
     return(
         <section id='project'>
         <div className='container-fluid'>
         <h1 className='project-title'>My Project</h1>
-        <p className='project-intro'>In my final semester I have done the project on "PERFORMANCE, COMBUSTION AND EMISSION EVALUATION OF
-        DIESEL ENGINE USING COTTON SEED OIL METHYL ESTER UNDER DUAL FUEL MODE"</p>
-
-        <p className='project-description'>In this project we prepared Biodiesel using Methanol and Cotton Seed Oil and analysed their performance, combustion and emission.</p>
-        <img className='project-img' src='.images/biodieselproduction.jpg' alt='biodiesel-production-img'></img>
-        
+        <p className='project-intro'>In my final semester I have done the project on Performance, Combustion And
+Emission Evaluation Of Diesel Engine Using Cotton Seed Oil Methyl Ester Under
+Dual Fuel Mode</p>
+        <Row>
+        <Col lg={6}><p className='project-intro'>In this project we prepared Biodiesel using Methanol and Cotton Seed Oil and analysed their performance, combustion and emission.</p></Col>
+        <Col lg={6}><img className='project-img' src='./images/biodieselproduction.jpg' alt='biodiesel-production-img'></img></Col>
+        </Row>
         </div>
         </section>
         

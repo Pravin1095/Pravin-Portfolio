@@ -299,12 +299,28 @@
 
   /* Project */
 
+  #project{
+    background-color:coral
+  }
+
   #project .container-fluid{
     padding:7% 30% 7% 30%
   }
 
   .project-title{
     text-align:center;
+  }
+
+  .project-img{
+    width:500px;
+    height:250px
+  }
+
+  .project-intro{
+    font-family:'Montserrat', sans-serif;
+    font-size:1.5rem;
+    padding:10% 0;
+    font-weight:bold
   }
 
   

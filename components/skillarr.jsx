@@ -1,5 +1,5 @@
-import { faCloud } from '@fortawesome/free-solid-svg-icons';
-import { faHtml5, faCss3Alt, faJs, faReact, faPython, faJava, faClo } from '@fortawesome/free-brands-svg-icons';
+import { faCloud} from '@fortawesome/free-solid-svg-icons';
+import { faHtml5, faCss3Alt, faJs, faReact, faPython, faJava} from '@fortawesome/free-brands-svg-icons';
 
 const skillarr1=[
     {
@@ -8,17 +8,20 @@ const skillarr1=[
       icon:faHtml5
     },
     {
-      id:1,
+
+      id:2,
       title:'CSS',
       icon:faCss3Alt
     },
     {
-      id:2,
+
+      id:3,
       title:'JavaScript',
       icon:faJs
     },
     {
-      id:3,
+
+      id:4,
       title:'React',
       icon:faReact
     }
@@ -45,5 +48,9 @@ const skillarr1=[
       icon:faCloud
     }
   ]
+
+
+
   export{skillarr1,skillarr2,skillarr3}
   
+

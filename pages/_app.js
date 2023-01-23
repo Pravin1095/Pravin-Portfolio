@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 
 import Head from 'next/head'
+import 'bootstrap/dist/css/bootstrap.css' 
 
 
 

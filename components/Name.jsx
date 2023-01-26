@@ -7,11 +7,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 
 
-
-
   
 const baseurl='http://api.github.com/users/Pravin1095'
-const nav_url='https://gist.githubusercontent.com/Pravin1095/c004366c7781821c4a7c21ba8bd4afc6/raw/838825c29f82e111d66b13e1cf434ab84e393448/Navarray.json'
+const nav_url='https://gist.githubusercontent.com/Pravin1095/c004366c7781821c4a7c21ba8bd4afc6/raw/3b5bb88bf75aafd2088f1f86b9b17c781ac4c127/Navarray.json'
 
 function NameParent() {
 

@@ -10,7 +10,7 @@ import Eduarr from './Eduarr.jsx'
 
 import Example from "./OffCanvasNav.jsx";
 import Trainee from "./Trainee.jsx";
-import Home from "./Home.jsx";
+import Home from "./MyHome.jsx";
 import app_arr from "./apparr.js";
 import HobbyParent from "./Hobbies.jsx";
 

@@ -4,7 +4,7 @@ import Trainee from './Trainee'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
-const Home=()=>{
+const MyHome=()=>{
 
     return (
         <React.Fragment>
@@ -16,4 +16,4 @@ const Home=()=>{
 
 )}
 
-export default Home
+export default MyHome

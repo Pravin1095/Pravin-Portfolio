@@ -9,7 +9,7 @@ const navarr=[
     },
     {
         title:'Skill and Hobby',
-        link:'/skillHobby'
+        link:'/SkillHobby'
     },
     {
         title:'Contact',

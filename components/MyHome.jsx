@@ -9,8 +9,8 @@ const MyHome=()=>{
     return (
         <React.Fragment>
         <Row>
-        <Col lg={7}><NameParent /></Col>
-        <Col lg={5}><Trainee /></Col></Row>
+        <Col lg={6}><NameParent /></Col>
+        <Col lg={6}><Trainee /></Col></Row>
         </React.Fragment>
     
 

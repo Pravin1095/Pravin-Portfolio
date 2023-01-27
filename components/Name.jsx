@@ -9,7 +9,7 @@ import axios from "axios";
 
   
 const baseurl='http://api.github.com/users/Pravin1095'
-const nav_url='https://gist.githubusercontent.com/Pravin1095/c004366c7781821c4a7c21ba8bd4afc6/raw/3b5bb88bf75aafd2088f1f86b9b17c781ac4c127/Navarray.json'
+const nav_url='https://gist.githubusercontent.com/Pravin1095/c004366c7781821c4a7c21ba8bd4afc6/raw/77f51bba9e709f894e29f806676f566eee814cdf/Navarray.json'
 
 function NameParent() {
 

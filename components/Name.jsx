@@ -5,45 +5,25 @@ import navarr from "./navarr";
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
-import $ from "jquery";
 
 
   
 const baseurl='http://api.github.com/users/Pravin1095'
-const nav_url='https://gist.githubusercontent.com/Pravin1095/c004366c7781821c4a7c21ba8bd4afc6/raw/b7b6e23b65342e0118385c38b35899eb3fd98af9/Navarray.json'
+const nav_url='https://gist.githubusercontent.com/Pravin1095/c004366c7781821c4a7c21ba8bd4afc6/raw/77f51bba9e709f894e29f806676f566eee814cdf/Navarray.json'
 
 function NameParent() {
 
   return (
     <>
-      {['start'].map(
-        (placement,index)=>(
-          <Name key={index} placement={placement} names='I am Pravin.' con='Welcome !'/>
-        )
-      )
-        
-      }
+      {['start'].map((placement, idx) => (
+        <Name key={idx} placement={placement} names='I am Pravin.' con='Welcome !'/>
+      ))}
     </>
   );
 }
-
-
 const Name = ({names,con,...props}) => {
 
-  const [dynamicname, setName] = useState("A Fresher");
-
-  const changeName = () => {
-    dynamicname === "A Fresher" && setName("A Developer");
-    dynamicname === "A Developer" && setName("A Fresher");
-  };
-  setInterval(changeName, 5000);
-
-  // $('#dynamicfresher').fadeOut(3000)
-
-  let [posts, setPost] = useState([]);
-  let [navjson,setNav]=useState([])
-
-
+  var [posts, setPost] = useState([]);
   useEffect(
     () => {
     axios.get(baseurl).then((response) => {
@@ -51,23 +31,19 @@ const Name = ({names,con,...props}) => {
       // console.log(response.data)
       // console.log(post)
     });
-    axios.get(nav_url).then((response)=>{
-      setNav(response.data)
-    }
-    )
   },[]);
   // console.log(posts)
 
-  
+  var [navjson,setNav]=useState([])
 
-  // useEffect(
-  //   ()=>{
-  //     axios.get(nav_url).then((response)=>{
-  //       setNav(response.data)
-  //     }
-  //     )
-  //   },[]
-  // )
+  useEffect(
+    ()=>{
+      axios.get(nav_url).then((response)=>{
+        setNav(response.data)
+      }
+      )
+    },[]
+  )
  
 
 
@@ -85,20 +61,12 @@ const Name = ({names,con,...props}) => {
       </button>
 
       <div className='bg-nav'>
-      <Offcanvas show={show} onHide={handleClose} placement='start'>
+      <Offcanvas show={show} onHide={handleClose} {...props}>
         <Offcanvas.Header className='close-button' closeButton>
           
         </Offcanvas.Header>
-        {/* {console.log(navjson)}
-        {console.log(Array.isArray(navjson) )}
-        {console.log(typeof navjson)} */}
-       
-        {/* {console.log(typeof JSON.parse(navjson))}
-        let navjsonarr=[...navjson] */}
-
-        {/* {console.log(navjsonarr)} */}
-        
-       {navjson.map(
+        {console.log(navjson)}
+       { navarr.map(
           (n,index)=>{
             return <React.Fragment key={index}><Offcanvas.Title><a href={n.link}><button className='nav-buttons' variant='dark'>{n.title}</button></a></Offcanvas.Title></React.Fragment>
           })}
@@ -106,13 +74,11 @@ const Name = ({names,con,...props}) => {
       
       </Offcanvas>
       </div>
-
-
-        <h1 className='fontsize'>I am {posts.name}</h1>
+        <h1 className='name fontsize'>I am {posts.name}</h1>
         <div className='animate-h3'>
-          <h3 id='dynamicfresher'>{dynamicname}</h3>
+          <h3>A Fresher</h3>
         </div>
-        <h2 className='fontsizew'>{con}</h2>
+        <h2 className='name fontsizew'>{con}</h2>
       </div>
     </section>
   );

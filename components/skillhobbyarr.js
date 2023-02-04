@@ -1,4 +1,4 @@
-import Skills from '../pages/Skills'
+import Skills from './Skills'
 
 import HobbyParent from './Hobbies';
 

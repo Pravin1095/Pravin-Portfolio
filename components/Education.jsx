@@ -1,7 +1,6 @@
 import React from 'react'
 import { faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
 import edu from './Eduarr';
 
 const Educations = () => {
@@ -36,7 +35,6 @@ const Education = ({ title, icon, earray }) => {
     // }
     return (
         <div>
-        
             <h2 className='edu-h2'>{title}</h2>
             <div className='grad-cap'><FontAwesomeIcon icon={icon} style={{ width: '10%', height: '5%' }}></FontAwesomeIcon></div>
 

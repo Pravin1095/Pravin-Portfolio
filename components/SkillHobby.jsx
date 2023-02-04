@@ -11,7 +11,7 @@ function ControlledCarousel() {
 
   return (
     <section id='rcarousel'>
-    <Carousel interval={null} variant='primary' activeIndex={index} onSelect={handleSelect}>
+    <Carousel interval={null} activeIndex={index} onSelect={handleSelect}>
 
      {sharr.map(
       (sh,index)=>{

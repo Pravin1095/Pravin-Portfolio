@@ -2,7 +2,7 @@ import React, {  useState } from 'react'
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 
-const ResumePage=()=>{
+const Trainee=()=>{
     var[resume,setResume]=useState('Download my Resume!')
   
 
@@ -27,4 +27,4 @@ const ResumePage=()=>{
 
     )
 }
-export default ResumePage
+export default Trainee

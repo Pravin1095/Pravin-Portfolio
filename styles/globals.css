@@ -41,12 +41,6 @@
     color:white;
   }
 
-  .common-nav-button{
-    margin:5% 0 0 5%;
-    width:75px;
-    height:75px;
-  }
-
   /*Name component */
 
   /* #name .container-fluid{
@@ -75,13 +69,17 @@
   .fontsize{
     font-size: 6rem;
     font-family: "Sacramento", cursive;
-    padding-top:25%;
+    
     color: #ffffff;
     text-align: center;
     font-weight: bold;
   }
 
-  
+  .name {
+    
+    margin-top:220px;
+   
+  }
   /* h2 {
     font-family: "Montserrat", sans-serif;
     
@@ -97,36 +95,13 @@
     
     color: #66bfbf;
     font-weight: normal;
-    
+    padding-bottom: 10px;
     text-align: center;
    
 
   }
   .top {
     background-color: #ff4c68;
-  }
-
-  #dynamicfresher{
-    animation: Fades 5s infinite;
-    padding:20% 0 20% 75%;
-    font-size:2rem
-  }
-
-  @keyframes Fades{
-    0%{
-      opacity:0;
-    }
-    100%{
-      opacity:1
-    }
-
-  }
-
-  /*My Home */
-
-  .train-class{
-    padding-right:0 !important;
-    padding-left:0 !important;
   }
   
 /*Intro component */
@@ -185,9 +160,6 @@
     padding-top:20px;
 
   }
-  .skill-nav{
-    background-color:#fed8b1;
-  }
 
   /*Education Component */
 
@@ -239,18 +211,7 @@
   .year{
    font-size:2rem;
    text-align:right;
-  
     
-  }
-
-  .edu-button{
-    width:25%;
-    height:25%;
-    margin-left:80%
-  }
-
-  .edu-nav{
-    background-color: #fed8b1;
   }
 
 
@@ -296,17 +257,6 @@
     margin:0 0 10%;
     
   }
-
-  /*Carousel*/
-  .carousel-control-next-icon{
-    background-color: blue;
-   
-  }
-
-  .carousel-control-prev-icon{
-    background-color:blue;
-  }
-
   /* Resume */
 
   #resumeid{
@@ -322,7 +272,6 @@
   #resumeid .container-fluid{
     padding:10% 10% 31% 10%
   }
- 
 
   .res-title{
     font-family:"Sacramento", cursive;;
@@ -338,7 +287,7 @@
     font-size:2rem;
     margin-top:50px;
     /* text-align:left; */
-    /* margin-right:20px; */
+    margin-right:20px;
     color:yellow
   }
 
@@ -355,18 +304,6 @@
     padding:10% 5%;
    
   }
-
-  .train-class{
-    padding-right:0px;
-    padding-left:0px;
-  }
-
-  @media (min-width: 992px){
-    .col-lg-6{
-      padding:0;
-    }
-  }
-
 
   /* Project */
 

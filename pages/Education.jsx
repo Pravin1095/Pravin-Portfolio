@@ -2,7 +2,7 @@ import React,{useState,useEffect} from 'react'
 import { faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import edu from '../components/Eduarr';
-import Navbar from '../components/Navbar';
+import MyNavbar from '../components/MyNavbar';
 import axios from 'axios';
 
 import Link from 'next/link';
@@ -54,7 +54,7 @@ const Education = ({ title, icon, earray,edujson}) => {
     // }
     return (
         <div>
-        <Navbar className='edu-nav' />
+        <MyNavbar className='edu-nav' />
             <h2 className='edu-h2'>{title}</h2>
             <div className='grad-cap'><FontAwesomeIcon icon={icon} style={{ width: '10%', height: '5%' }}></FontAwesomeIcon></div>
 

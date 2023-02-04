@@ -8,7 +8,7 @@ import axios from "axios";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import ResumePage2 from "./ResumePage2";
-import Navbar from '../components/NavBar'
+import Navbar from '../components/MyNavbar'
 // import $ from "jquery";
 
 

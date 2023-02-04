@@ -4,7 +4,7 @@ import { skillarr1, skillarr2, skillarr3 } from "../components/skillarr";
 import { faCloud} from '@fortawesome/free-solid-svg-icons';
 import { faHtml5, faCss3Alt, faJs, faReact, faPython, faJava} from '@fortawesome/free-brands-svg-icons';
 import axios from "axios";
-import Navbar from '../components/Navbar';
+import Navbar from '../components/MyNavbar';
 
 
 const skillurl = 'https://gist.githubusercontent.com/Pravin1095/9a4503f8e93bdb6367470f8f79ebc552/raw/a42eff38b8337f9279a5f17f1bc4a9812c03ec82/SkillArray.json'

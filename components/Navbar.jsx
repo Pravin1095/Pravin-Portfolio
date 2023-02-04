@@ -27,7 +27,7 @@ useEffect(
 
 
   const [style,setStyle]=useState('nav-but')
-  const navItems=['Home','About','Education','Skill and Hobby','Contact','Footer']
+  // const navItems=['Home','About','Education','Skill and Hobby','Contact','Footer']
   const navStyles=['nav-but','about-nav','edu-nav','skill-nav','contact-nav','footer-nav']
 
   const changeNavstyle=(buttonval)=>{

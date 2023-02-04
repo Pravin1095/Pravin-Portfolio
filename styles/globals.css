@@ -40,7 +40,18 @@
   .fcolor{
     color:white;
   }
+  
+  .common-nav-button{
+    margin:5% 0 0 5%;
+    width:75px;
+    height:75px;
+  }
 
+
+  /*My Home*/
+  .train-class{
+    padding:0 !important
+  }
   /*Name component */
 
   /* #name .container-fluid{
@@ -52,7 +63,7 @@
     margin:0
   }
   #name .container-fluid{
-    padding:10% 20% 10% 10%;
+    padding:10% 10% 31% 10%;
     
   }
 
@@ -102,6 +113,21 @@
   }
   .top {
     background-color: #ff4c68;
+  }
+  #dynamicfresher{
+    animation: Fades 5s infinite;
+    padding:20% 0 20% 75%;
+    font-size:2rem
+  }
+
+  @keyframes Fades{
+    0%{
+      opacity:0;
+    }
+    100%{
+      opacity:1
+    }
+
   }
   
 /*Intro component */
@@ -257,6 +283,17 @@
     margin:0 0 10%;
     
   }
+
+   /*Carousel*/
+   .carousel-control-next-icon{
+    background-color: blue;
+   
+  }
+
+  .carousel-control-prev-icon{
+    background-color:blue;
+  }
+
   /* Resume */
 
   #resumeid{

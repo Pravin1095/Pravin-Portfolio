@@ -5,7 +5,7 @@ const INITIAL_STATE = {
   praveen: '',
 }
 
-export default (state = INITIAL_STATE, action = {}) => {
+const ReducerFunction= (state = INITIAL_STATE, action = {}) => {
   switch (action.type) {
     case 'SET_DATA':
       return {
@@ -21,3 +21,4 @@ export default (state = INITIAL_STATE, action = {}) => {
       return state
   }
 }
+export default ReducerFunction

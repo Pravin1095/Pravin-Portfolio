@@ -1,3 +1,5 @@
+import React from "react"
+
 const setData = (content) => {
   return {
     type: 'SET_DATA',

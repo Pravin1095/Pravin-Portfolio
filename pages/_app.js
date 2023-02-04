@@ -5,7 +5,9 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 
 import Head from 'next/head'
-import 'bootstrap/dist/css/bootstrap.css' 
+import 'bootstrap/dist/css/bootstrap.css'
+import store from './store'
+import { Provider } from 'react-redux' 
 
 
 
@@ -34,8 +36,8 @@ function MyApp({ Component, pageProps }) {
          <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"></Script> */}
 
       
-
-      <Component {...pageProps} />
+      <Provider store={store}>
+      <Component {...pageProps} /></Provider>
     </div>
   )
 }

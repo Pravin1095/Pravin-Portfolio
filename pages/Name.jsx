@@ -1,34 +1,47 @@
 import React, {useState,useEffect} from "react";
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import navarr from "./navarr";
+// import navarr from "./navarr";
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
-import $ from "jquery";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import ResumePage2 from "./ResumePage2";
+import Navbar from '../components/NavBar'
+// import $ from "jquery";
 
 
   
 const baseurl='http://api.github.com/users/Pravin1095'
 const nav_url='https://gist.githubusercontent.com/Pravin1095/c004366c7781821c4a7c21ba8bd4afc6/raw/b7b6e23b65342e0118385c38b35899eb3fd98af9/Navarray.json'
 
+
 function NameParent() {
+  let h=null
+  const sendFunction=(params)=>{
+    h=params
+    // {console.log(params)}
+    // {console.log(h)}
+  }
+  
+
+  
 
   return (
     <>
-      {['start'].map(
-        (placement,index)=>(
-          <Name key={index} placement={placement} names='I am Pravin.' con='Welcome !'/>
-        )
-      )
-        
-      }
+    <Row>
+      <Col lg={6} className='train-class'>
+          <Name names='I am Pravin.' con='Welcome !' clickval={h}/>  
+      </Col>
+      <Col lg={6} className='train-class'><ResumePage2 sendF={sendFunction}/></Col>
+      </Row>
     </>
   );
 }
 
 
-const Name = ({names,con,...props}) => {
+const Name = ({names,con,clickval}) => {
 
   const [dynamicname, setName] = useState("A Fresher");
 
@@ -80,7 +93,8 @@ const Name = ({names,con,...props}) => {
     <section className='top' id='name'>
 
       <div className="container-fluid">
-      <button onClick={handleShow} className='nav-but'>
+      <Navbar />
+      {/* <button onClick={handleShow} className='nav-but'>
       <FontAwesomeIcon icon={faBars} style={{width:'50px',height:'50px'}}></FontAwesomeIcon>
       </button>
 
@@ -98,14 +112,14 @@ const Name = ({names,con,...props}) => {
 
         {/* {console.log(navjsonarr)} */}
         
-       {navjson.map(
+       {/* {navjson.map(
           (n,index)=>{
             return <React.Fragment key={index}><Offcanvas.Title><a href={n.link}><button className='nav-buttons' variant='dark'>{n.title}</button></a></Offcanvas.Title></React.Fragment>
           })}
         
       
-      </Offcanvas>
-      </div>
+      </Offcanvas> */} 
+      
 
 
         <h1 className='fontsize'>I am {posts.name}</h1>
@@ -113,7 +127,9 @@ const Name = ({names,con,...props}) => {
           <h3 id='dynamicfresher'>{dynamicname}</h3>
         </div>
         <h2 className='fontsizew'>{con}</h2>
-      </div>
+        <h2>{clickval}</h2>
+        </div>
+      
     </section>
   );
 }

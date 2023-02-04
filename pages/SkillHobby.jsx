@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import sharr from '../components/skillhobbyarr';
 
+
 function ControlledCarousel() {
   const [index, setIndex] = useState(0);
 
@@ -11,6 +12,7 @@ function ControlledCarousel() {
 
   return (
     <section id='rcarousel'>
+    
     <Carousel interval={null} activeIndex={index} onSelect={handleSelect}>
 
      {sharr.map(

@@ -7,7 +7,7 @@ import Link from "next/link";
 
 
 
-const nav_url='https://gist.githubusercontent.com/Pravin1095/c004366c7781821c4a7c21ba8bd4afc6/raw/f551b01f295b8ac15f6434f3322f6abc8732dcfa/Navarray.json'
+const nav_url='https://gist.githubusercontent.com/Pravin1095/c004366c7781821c4a7c21ba8bd4afc6/raw/694d2cf9c25e3670597483df7749d6b749260883/Navarray.json'
 const MyNavbar=()=>{
 
     const [show, setShow] = useState(false);
@@ -26,22 +26,36 @@ useEffect(
   },[]);
 
 
-  // const [style,setStyle]=useState('nav-but')
-  // // const navItems=['Home','About','Education','Skill and Hobby','Contact','Footer']
-  // const navStyles=['nav-but','about-nav','edu-nav','skill-nav','contact-nav','footer-nav']
+  let [style,setStyle]=useState('nav-but')
+  // const navItems=['Home','About','Education','Skill and Hobby','Contact','Footer']
+  let navStyles=['nav-but','about-nav','edu-nav','skill-nav','contact-nav','footer-nav']
 
-  // const changeNavstyle=(buttonval)=>{
-  //   {console.log(buttonval)}
-  //   // setStyle(navStyles[buttonval])
+let changeNavstyle=(buttonval)=>{
+  setStyle(style=navStyles[buttonval])
+  // console.log(buttonval)
+  // {console.log(navStyles[buttonval])}
+  
+  }
+  // {console.log(style)}
 
-  // }
+
+useEffect(
+  ()=>{
+    setStyle(style=style)
+  }
+)
+// console.log(style)
+
     return <div>
-    <button onClick={handleShow} className='nav-but'>
+    
+
+    {/* {console.log(style)} */}
+    <button onClick={handleShow} className={style}>
       <FontAwesomeIcon icon={faBars} style={{width:'50px',height:'50px'}}></FontAwesomeIcon>
       </button>
 
       
-      <Offcanvas show={show} onHide={handleClose} placement='start'>
+      <Offcanvas className='nav-scroller' show={show} onHide={handleClose} placement='start'>
         <Offcanvas.Header className='close-button' closeButton>
           
         </Offcanvas.Header>
@@ -56,7 +70,7 @@ useEffect(
         
        {navjson.map(
           (n,index)=>{
-            return <React.Fragment key={index}><Offcanvas.Title><Link href={n.link}><button value={n.val} className='nav-buttons' variant='dark'>{n.title}</button></Link></Offcanvas.Title></React.Fragment>
+            return <React.Fragment key={index}><Offcanvas.Title><Link href={n.link}><button onClick={e=>{changeNavstyle(e.target.value)}} value={n.val} className='nav-buttons' variant='dark'>{n.title}</button></Link></Offcanvas.Title></React.Fragment>
           })}
         
       

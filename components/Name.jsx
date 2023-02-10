@@ -5,7 +5,7 @@ import navarr from "./navarr";
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
-
+import reducer from './reducer'
 
   
 const baseurl='http://api.github.com/users/Pravin1095'
@@ -74,6 +74,9 @@ const Name = ({names,con,...props}) => {
       
       </Offcanvas>
       </div>
+      {/* const mapStateToProps=(state)=>({
+        fname:state.name,
+      }) */}
         <h1 className='name fontsize'>I am {posts.name}</h1>
         <div className='animate-h3'>
           <h3>A Fresher</h3>

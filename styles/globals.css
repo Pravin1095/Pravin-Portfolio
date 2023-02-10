@@ -10,7 +10,7 @@
     color:black;
     width:75px;
     height:75px;
-    background-color: #ff4c68;
+    background-color: transparent;
     border:0px;
 
   }
@@ -21,9 +21,10 @@
     border-radius:100%;
     border:solid 3px red ;
     text-align:center;
-    font-size:3rem;
-    margin:5% 30% 5% 10%;
-    width:250px;
+    font-size:1vw;
+    margin:5% 30% 5% 30%;
+    width:25%;
+    height:75%
     
     
   }
@@ -63,7 +64,7 @@
     margin:0
   }
   #name .container-fluid{
-    padding:10% 10% 31% 10%;
+    padding:10% 10% 10% 10%;
     
   }
 
@@ -237,7 +238,24 @@
   .year{
    font-size:2rem;
    text-align:right;
-    
+  }
+
+  .edu-button{
+    margin-left:50%;
+    background-color:black;
+    color:white;
+    width:50%;
+    height:25%;
+    border-radius:10%;
+    padding-left:5%;
+
+  }
+  .download-icon{
+    padding-right:5%;
+  }
+
+  .edu-nav{
+    background-color: #fed8b1;
   }
 
 
@@ -294,6 +312,12 @@
     background-color:blue;
   }
 
+  .carousel-control-prev{
+    position:absolute !important;
+    top:100px !important;
+    bottom:50px !important;
+  }
+
   /* Resume */
 
   #resumeid{
@@ -307,7 +331,7 @@
 
 
   #resumeid .container-fluid{
-    padding:10% 10% 31% 10%
+    padding:10% 10% 17% 10%
   }
 
   .res-title{
@@ -370,7 +394,42 @@
     font-weight:bold
   }
 
-  
+  /*Mec Project */
+  #mec-card{
+    background-color:#E4F9F5
+  }
+
+
+  #mec-card .container-fluid{
+    padding:3% 10% 3% 10%;
+  }
+  .card-image{
+    width:50% !important;
+    height:50% !important;
+  }
+  .pro-title{
+    text-align:center;
+    padding:2% 0 2% 0; 
+
+  }
+  .prosub-title{
+    text-align:center;
+    padding:2% 0 2% 0; 
+  }
+
+  /* CS Courses Projects */
+
+  #procourses{
+    background-color:#E4F9F5
+  }
+  #procourses .container-fluid{
+    padding:3% 10% 3% 10%;
+  }
+
+  .procourse-title{
+    text-align:center;
+    padding:2% 0 2% 0;
+  }
 
   /* Contact component */
 

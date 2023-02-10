@@ -1,8 +1,37 @@
 // reducer.js
 const INITIAL_STATE = {
-  VirshiniPirfilo: 'Mahesh',
-  contact: 'xzvxcv',
-  praveen: '',
+ myName:'Pravin',
+ myEdu:
+ [
+  {
+      "link":"https://www.salemholycross.com/",
+      "institute":"Holy Cross Matriculation Higher Secondary School",
+      "school":"-Class X",
+      "percent":"Percentage: 97.8 %",
+      "year":"2015-2016",
+      "downloadlink":"./Docs/10th MarkSheet.jpg"
+      
+  },
+  {
+      "link":"https://www.salemholycross.com/",
+      "institute":"Holy Cross Matriculation Higher Secondary School",
+      "school":"-Class XII",
+      "percent":"Percentage: 91.25 %",
+      "year":"2017-2018",
+      "downloadlink":"./Docs/12th MarkSheet.jpg"
+  },
+  {
+      "link":"https://www.sastra.edu/",
+      "institute":"SASTRA Deemed To Be University",
+      "school":"-B.Tech Mechanical Engineering",
+      "percent":"CGPA: 7.6954",
+      "year":"2018-2022",
+      "downloadlink":"./Docs/ProvisionalCertificate.pdf"
+  }
+
+]
+ 
+  
 }
 
 const ReducerFunction= (state = INITIAL_STATE, action = {}) => {
@@ -10,12 +39,12 @@ const ReducerFunction= (state = INITIAL_STATE, action = {}) => {
     case 'SET_DATA':
       return {
         ...state,
-        ...action.content,
+       myName:action.content,
       }
-    case 'SET_Contact':
+    case 'Name_Set_Data':
       return {
         ...state,
-        ...action.content,
+         ...action.content,
       }
     default:
       return state

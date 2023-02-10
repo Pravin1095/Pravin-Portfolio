@@ -1,15 +1,17 @@
 import React,{useState,useEffect} from 'react'
-import { faGraduationCap } from '@fortawesome/free-solid-svg-icons';
+import { faGraduationCap,faDownload } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import edu from '../components/Eduarr';
 import MyNavbar from '../components/MyNavbar';
 import axios from 'axios';
+import { appendData } from '../components/action'
+import { connect } from 'react-redux'
 
-import Link from 'next/link';
+
 
 
 const eduurl='https://gist.githubusercontent.com/Pravin1095/cfef0014701516609f1c59bce19ea6a3/raw/cff44eabb5352e228ae705a24f7038996b2e8999/EducationArray.json'
-const Educations = () => {
+const Educations = (props) => {
 
     // function sendAttack(params){
     //     console.log(params)
@@ -27,11 +29,18 @@ const Educations = () => {
         },[]
     )
 
+    useEffect(
+        ()=>{
+            props.appendData()
+        },[]
+    )
+    {console.log(props.EducationComponent)}
+
 
     return (
         <section id='education'>
 
-            <Education title='My Education' icon={faGraduationCap} earray={edu} edujson={edujson} />
+            <Education edureduxarray={props.EducationComponent} title='My Education' icon={faGraduationCap} earray={edu} edujson={edujson} />
 
         </section>
     )
@@ -48,7 +57,7 @@ const Educations = () => {
     //       )    
     // })
 }
-const Education = ({ title, icon, earray,edujson}) => {
+const Education = ({ title, icon, earray,edujson,edureduxarray}) => {
     // function attack(){
     //     props.sendAttack('This is from child(education) component')
     // }
@@ -58,7 +67,7 @@ const Education = ({ title, icon, earray,edujson}) => {
             <h2 className='edu-h2'>{title}</h2>
             <div className='grad-cap'><FontAwesomeIcon icon={icon} style={{ width: '10%', height: '5%' }}></FontAwesomeIcon></div>
 
-            <div>{edujson.map(
+            <div>{edureduxarray.map(
                 (edua,index) => {
                     return <React.Fragment key={index}>
                     
@@ -73,7 +82,7 @@ const Education = ({ title, icon, earray,edujson}) => {
                             <p>{edua.year}</p>
                         </div>
                         <div className='col-lg-4'>
-                            <Link href={edua.downloadlink} download><button className='edu-button'>Download Certificate</button></Link>
+                            <a href={edua.downloadlink} download><button className='edu-button'><FontAwesomeIcon className='download-icon' icon={faDownload}></FontAwesomeIcon>Download Certificate</button></a>
                         </div>
                         </div>
                         <hr className='hor-line'></hr></React.Fragment>
@@ -101,4 +110,12 @@ const Education = ({ title, icon, earray,edujson}) => {
 
 
 
-export default Educations
+const mapDispatchToProps = {
+    appendData,
+  }
+  
+  const mapStateToProps = (state) => ({
+    EducationComponent: state.myEdu,
+  })
+  
+  export default connect(mapStateToProps, mapDispatchToProps)(Educations)

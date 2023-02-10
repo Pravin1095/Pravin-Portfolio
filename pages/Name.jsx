@@ -9,6 +9,8 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import ResumePage2 from "./ResumePage2";
 import Navbar from '../components/MyNavbar'
+import { connect } from 'react-redux'
+import { nameappendData } from '../components/action'
 // import $ from "jquery";
 
 
@@ -17,13 +19,20 @@ const baseurl='http://api.github.com/users/Pravin1095'
 const nav_url='https://gist.githubusercontent.com/Pravin1095/c004366c7781821c4a7c21ba8bd4afc6/raw/b7b6e23b65342e0118385c38b35899eb3fd98af9/Navarray.json'
 
 
-function NameParent() {
+function NameParent(props) {
   let h=null
   const sendFunction=(params)=>{
     h=params
     // {console.log(params)}
     // {console.log(h)}
   }
+
+  useEffect(
+    ()=>{
+      props.nameappendData()
+    },[]
+  )
+  {console.log(props.NameComponent)}
   
 
   
@@ -32,7 +41,7 @@ function NameParent() {
     <>
     <Row>
       <Col lg={6} className='train-class'>
-          <Name names='I am Pravin.' con='Welcome !' clickval={h}/>  
+          <Name names={props.NameComponent} con='Welcome !' clickval={h}/>  
       </Col>
       <Col lg={6} className='train-class'><ResumePage2 sendF={sendFunction}/></Col>
       </Row>
@@ -67,7 +76,9 @@ const Name = ({names,con,clickval}) => {
     axios.get(nav_url).then((response)=>{
       setNav(response.data)
     }
-    )
+    );
+    
+
   },[]);
   // console.log(posts)
 
@@ -122,15 +133,28 @@ const Name = ({names,con,clickval}) => {
       
 
 
-        <h1 className='fontsize'>I am {posts.name}</h1>
+        <h1 className='fontsize'>I am {names} </h1>
         <div className='animate-h3'>
           <h3 id='dynamicfresher'>{dynamicname}</h3>
         </div>
         <h2 className='fontsizew'>{con}</h2>
         <h2>{clickval}</h2>
+        
         </div>
       
     </section>
   );
+
+
 }
-export default NameParent;
+
+const mapDispatchToProps = {
+  nameappendData,
+}
+
+const mapStateToProps = (state) => ({
+  NameComponent: state.myName,
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(NameParent)
+// export default NameParent

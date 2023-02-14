@@ -44,6 +44,29 @@ function ContactParent({contarr}){
     return <Contact title='Get in Touch !' mail='mailto:a.pravin3210@gmail.com' mobile='+91 8778595979' />
 }
 function Contact(props){
+    
+
+    const [buttonstyle,setStyle]=useState(true)
+    const[msg,setMsg]=useState('')
+
+    const handleMouseOver=()=>{
+        setStyle(false)
+    }
+
+    const handleMouseOut=()=>{
+        setStyle(true)
+    }
+
+    const submitMessage=()=>{
+       
+       setMsg('Hello '+allValues.name+ ' ! Your form has been submitted successfully! ThankYou! 😊')
+
+    }
+    
+
+ 
+
+
 
     useEffect(
         ()=>{
@@ -82,6 +105,8 @@ function Contact(props){
             }
         )
 
+       
+
      }
     return(
         <section id='contact'>
@@ -96,9 +121,10 @@ function Contact(props){
                 
                 <input onChange={changeHandler} name='sub' value={allValues.sub} type='text' placeholder='Subject'></input>
                 <textarea onChange={changeHandler} name='message' value={allValues.message} placeholder='Message'></textarea>
-                <input type='submit' placeholder='Send Me'></input>
+                <input className='contact-submit-button' onClick={submitMessage} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} style={{backgroundColor:buttonstyle ? 'white':'black'}} type='submit' placeholder='Send Me'></input>
 
                 </form>
+               <h3 className='submit-msg'>{msg}</h3>
                 {/* <a className="btn btn-primary btn-lg mail-button" href={props.mail} role="button">Email Me</a> */}
                 <h3 className='mobile'> <FontAwesomeIcon icon={faMobile} style={{width:'50px'}} />{props.mobile}</h3>
                 </div></div>

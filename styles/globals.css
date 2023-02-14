@@ -496,6 +496,15 @@
   padding:3% 40% 3% 32%
  }
 
+ .contact-submit-button{
+  color:blue;
+  margin:5% 0 0 25% !important;
+ }
+
+ .submit-msg{
+  padding-top:10%;
+ }
+
 
 
 /* Footer component */

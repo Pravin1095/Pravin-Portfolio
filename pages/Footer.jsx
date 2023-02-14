@@ -6,13 +6,8 @@ import MyNavbar from '../components/MyNavbar.jsx'
 
 
 
-const foot_url='https://gist.githubusercontent.com/Pravin1095/5b9f6ca9b6f016fd7d5b7efa15f0a3d5/raw/d130ebb7f428349835549796fea73106ff33ad1e/Footer.json'
+const foot_url='https://gist.githubusercontent.com/Pravin1095/5b9f6ca9b6f016fd7d5b7efa15f0a3d5/raw/67a22e1996888c93ce9e794b55b28836e784d9f7/Footer.json'
 const FooterParent=()=>{
-    return(
-        <Footer farray={foot} />
-    )
-}
-const Footer=({farray})=>{
     const [f,setFoot]=useState([])
     useEffect(
         ()=>{
@@ -22,22 +17,27 @@ const Footer=({farray})=>{
         },[]
     )
     return(
+        <Footer copy='© Pravin A' farray={foot} farray2={f} />
+    )
+}
+const Footer=({farray,farray2,copy})=>{
+    
+    return(
        
         <section id='contact2'>
         <MyNavbar />
-         {console.log(f.social)}
-         {console.log(typeof f.social)}
+         
 <div className="bottom-container container-fluid">
-    {/* <div>{f.social.map(
+    <div>{farray2.map(
         (foots,index)=>{
             return <React.Fragment key={index}>
-            <a className='footer-link' href=''>{foots.smedia}</a>
+            <a className='footer-link' href={foots.link}>{foots.smedia}</a>
             </React.Fragment>
         }
-     )}</div> */}
+     )}</div>
     
-     <p className="copyright">f.copyright[0]</p>
-     {console.log(f.copyright)}
+     <p className="copyright">{copy}</p>
+     
      
  </div>
  </section>

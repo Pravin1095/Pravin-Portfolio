@@ -33,7 +33,7 @@ const Skills = () => {
   useEffect((
   ) => {
     axios.get(skillurl).then((response) => {
-      setskilljson(skilljson=response.data)
+      setskilljson(response.data)
     })
 
   }, []
@@ -50,6 +50,7 @@ const Skills = () => {
       {console.log(typeof skilljson.frontend)}
       {console.log(typeof skilljson.backend)}
       {console.log(typeof skilljson.others)}
+      {console.log(skilljson.frontend)}
 
      
       <div className='container-fluid'>

@@ -5,9 +5,16 @@ import Row from 'react-bootstrap/Row'
 
 const ResumePage2=({sendF})=>{
     let [resume,setResume]=useState('Download my Resume!')
+    let [isMouseOver,setMouseOver]=useState(true)
+    
     console.log(sendF)
   
-
+    const mouseOutHandle=()=>{
+        setMouseOver(true)
+    }
+    const mouseHandle=()=>{
+        setMouseOver(false)
+    }
     const funcResume=()=>{
         setResume(resume='ThankYou for downloading my Resume')
        
@@ -25,7 +32,7 @@ const ResumePage2=({sendF})=>{
         <Row>
         <Col lg={6}> <h2 className='res-title'>{resume}</h2></Col>
         <Col lg={6}><a href='./Docs/Pravin A_Resume.pdf' download>
-        <button className='resume-button' onClick={()=>{chfunc('Resume downloaded');funcResume();}}  >Download Resume!</button>
+        <button onMouseOver={mouseHandle} onMouseOut={mouseOutHandle} style={{backgroundColor:isMouseOver ? 'white':'black'}} className='resume-button' onClick={()=>{chfunc('Resume downloaded');funcResume();}}  >Download Resume!</button>
         </a></Col></Row>
         </div>
         </section>

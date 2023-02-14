@@ -7,7 +7,7 @@ import MyNavbar from '../components/MyNavbar';
 
 
 
-const pro_cs_url='https://gist.githubusercontent.com/Pravin1095/3fbcdfb03947750ba0ea0cda84cdda29/raw/fcfe01df8e9201764eb2849f0669161de3cc593c/Project_Cs.json'
+const pro_cs_url='https://gist.githubusercontent.com/Pravin1095/3fbcdfb03947750ba0ea0cda84cdda29/raw/dd787ebacfc9a2707673ca826e2f3cc16b9799ac/Project_Cs.json'
 const course_url='https://gist.githubusercontent.com/Pravin1095/878b688de359279c42ca2a737d77ee1e/raw/d7d0dcf196472e5f542dd3dd33664bc1f11fe51c/Courses.json'
 const Project_Cs_Parent=()=>{
     const [pro_cs_json,setProcs]=useState([])
@@ -35,7 +35,8 @@ const Project_Cs_Parent=()=>{
 
 const Project_Cs=({child,t,procourse_json})=>{
 
-    
+    let num=3
+    t==='Web Development Projects' ? num=4 :num
     return <section id='procourses'>
     {child}
     <div className='container-fluid'>
@@ -43,7 +44,7 @@ const Project_Cs=({child,t,procourse_json})=>{
     <Row>{procourse_json.map(
         (mec,index)=>{
 
-         return   <React.Fragment key={index}><Col lg={3} ><Card bg='dark' text='light'>
+         return   <React.Fragment key={index}><Col lg={num} ><Card bg='dark' text='light'>
     <Card.Img className='card-image' variant="top" src={mec.image}  />
     <Card.Body>
       <Card.Title>{mec.title}</Card.Title>

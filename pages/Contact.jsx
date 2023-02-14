@@ -1,7 +1,8 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import { faMobile} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import MyNavbar from '../components/MyNavbar';
+import axios from 'axios';
 // import mongoose, {connect} from 'mongoose';
 
 
@@ -37,25 +38,64 @@ import MyNavbar from '../components/MyNavbar';
 //     }
 // })}
 
+const contact_url=' http://localhost:8000/Form-data'
 function ContactParent({contarr}){
     
     return <Contact title='Get in Touch !' mail='mailto:a.pravin3210@gmail.com' mobile='+91 8778595979' />
 }
 function Contact(props){
+
+    useEffect(
+        ()=>{
+            axios.get(contact_url).then(
+                (response)=>{
+                    console.log(response.data)
+                }
+            ) 
+                
+            },[])
+        
     
+    const [allValues, setAllValues] = useState({
+        name: '',
+        mail: '',
+        sub: '',
+        message: ''
+     });
+     const changeHandler = (event) => {
+        setAllValues({...allValues, [event.target.name]: event.target.value})
+        console.log(allValues)
+     }
+
+     const handleSubmit=(event)=>{
+        console.log(allValues.name)
+        event.preventDefault()
+        axios.post(contact_url,{
+            name:allValues.name,
+            mail:allValues.mail,
+            sub:allValues.sub,
+            message:allValues.message})
+        .then(
+            (response)=>{
+                console.log(response)
+
+            }
+        )
+
+     }
     return(
         <section id='contact'>
         <MyNavbar />
             <div className='container-fluid'>
             <div className='bottom'>
                 <h2 className='contact-title'>{props.title}</h2>
-                <form action='https://formsubmit.co/a.pravin3210@gmail.com' method='POST'>
-                <input type='text' placeholder='Your Name' required></input>
+                <form onSubmit={handleSubmit}>
+                <input onChange={changeHandler} name='name' value={allValues.name} type='text' placeholder='Your Name' required></input>
                 <br></br>
-                <input type='email' placeholder='Your Email' required></input>
-                <input type='hidden'></input>
-                <input type='text' placeholder='Subject'></input>
-                <textarea placeholder='Message'></textarea>
+                <input onChange={changeHandler} name='mail' value={allValues.mail} type='email' placeholder='Your Email' required></input>
+                
+                <input onChange={changeHandler} name='sub' value={allValues.sub} type='text' placeholder='Subject'></input>
+                <textarea onChange={changeHandler} name='message' value={allValues.message} placeholder='Message'></textarea>
                 <input type='submit' placeholder='Send Me'></input>
 
                 </form>

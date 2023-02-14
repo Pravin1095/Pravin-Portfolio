@@ -1,5 +1,6 @@
 import React from "react";
 import Image from 'next/image'
+import MyNavbar from "../components/MyNavbar";
 
 
 const IntroParent=()=>{
@@ -12,6 +13,7 @@ const IntroParent=()=>{
 const Intro=(props)=> {
   return (
     <section id='intro'>
+    <MyNavbar />
     <div className="profile">
       <Image className="my-photo" src={props.image} alt="photo-img" width={200} height={250}/>
       <h2 className='intro-title'>{props.title}</h2>

@@ -74,7 +74,7 @@ const Education = ({ title, icon, earray,edujson,edureduxarray}) => {
                     <div className='row container-fluid'>
                     
                     <div className='col-lg-4 school'>
-                        <a href={edua.link}>{edua.institute}</a>
+                        <a className='school-link' href={edua.link}>{edua.institute}</a>
                         <p>{edua.school}</p>
                         <p>{edua.percent}</p>
                     </div>

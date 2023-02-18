@@ -38,7 +38,7 @@ import axios from 'axios';
 //     }
 // })}
 
-const contact_url='https://gist.githubusercontent.com/Pravin1095/60f1a3c8a635b11aa468f662e99e91bf/raw/41efdd841b936eb2c6bea4dc90c0f70d5d1b7e15/Contact_Form.json'
+const contact_url='http://localhost:8000/Form-data'
 function ContactParent({contarr}){
     
     return <Contact title='Get in Touch !' mail='mailto:a.pravin3210@gmail.com' mobile='+91 8778595979' />

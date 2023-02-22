@@ -39,11 +39,15 @@ import axios from 'axios';
 // })}
 
 const contact_url='http://localhost:8000/Form-data'
-function ContactParent({contarr}){
+const ContactParent=()=>{
     
     return <Contact title='Get in Touch !' mail='mailto:a.pravin3210@gmail.com' mobile='+91 8778595979' />
 }
-function Contact(props){
+
+
+const Contact=(props)=>
+
+{
     
 
     const [buttonstyle,setStyle]=useState(true)
@@ -68,15 +72,15 @@ function Contact(props){
 
 
 
-    useEffect(
-        ()=>{
-            axios.get(contact_url).then(
-                (response)=>{
-                    console.log(response.data)
-                }
-            ) 
-                
-            },[])
+    // useEffect(
+    //     ()=>{
+    //         // axios.get(contact_url).then(
+    //         //     (response)=>{
+    //         //         console.log(response.data)
+    //              }
+    //          ) 
+
+            
         
     
     const [allValues, setAllValues] = useState({
@@ -85,25 +89,39 @@ function Contact(props){
         sub: '',
         message: ''
      });
+
+ 
+     
      const changeHandler = (event) => {
-        setAllValues({...allValues, [event.target.name]: event.target.value})
+        setAllValues({...allValues, [event.target.name] : event.target.value})
         console.log(allValues)
      }
 
      const handleSubmit=(event)=>{
-        console.log(allValues.name)
         event.preventDefault()
-        axios.post(contact_url,{
+        var form_datas=JSON.parse(localStorage.getItem('form') || '[]') 
+        var form_data={
             name:allValues.name,
             mail:allValues.mail,
             sub:allValues.sub,
-            message:allValues.message})
-        .then(
-            (response)=>{
-                console.log(response)
+            message:allValues.message
+        }
+        
+        form_datas.push(form_data)
+        localStorage.setItem('form',JSON.stringify(form_datas))
+        console.log(allValues.name)
+        
+        // axios.post(contact_url,{
+        //     name:allValues.name,
+        //     mail:allValues.mail,
+        //     sub:allValues.sub,
+        //     message:allValues.message})
+        // .then(
+        //     (response)=>{
+        //         console.log(response)
 
-            }
-        )
+        //     }
+        // )
 
        
 

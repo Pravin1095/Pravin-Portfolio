@@ -2,7 +2,8 @@ import React,{useState,useEffect} from 'react'
 import { faMobile} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import MyNavbar from '../components/MyNavbar';
-import axios from 'axios';
+import axios, { all } from 'axios';
+
 // import mongoose, {connect} from 'mongoose';
 
 
@@ -64,11 +65,15 @@ const Contact=(props)=>
     const submitMessage=()=>{
        
        setMsg('Hello '+allValues.name+ ' ! Your form has been submitted successfully! ThankYou! 😊')
+       {allValues.name.length===0 && setMsg('Please enter your name')}
+       {allValues.mail.length===0 && setMsg('Please enter your Email')}
+       {allValues.sub.length===0 && setMsg('Please enter the subject')}
+       {allValues.message.length===0 && setMsg('Please enter the message')}
 
     }
     
+{console.log(msg)}
 
- 
 
 
 
@@ -90,28 +95,72 @@ const Contact=(props)=>
         message: ''
      });
 
- 
+     
      
      const changeHandler = (event) => {
         setAllValues({...allValues, [event.target.name] : event.target.value})
         console.log(allValues)
      }
 
-     const handleSubmit=(event)=>{
+     const handleSubmit=async(event)=>{
         event.preventDefault()
-        var form_datas=JSON.parse(localStorage.getItem('form') || '[]') 
-        var form_data={
+        // const JSONdata = JSON.stringify(allValues)
+
+        // // API endpoint where we send form data.
+        // const endpoint = '/api/form'
+    
+        // // Form the request for sending data to the server.
+        // const options = {
+        //   // The method is POST because we are sending data.
+        //   method: 'POST',
+        //   // Tell the server we're sending JSON.
+        //   headers: {
+        //     'Content-Type': 'application/json',
+        //   },
+        //   // Body of the request is the JSON data we created above.
+        //   body: JSONdata,
+        // }
+    
+        // // Send the form data to our forms API on Vercel and get a response.
+        // const response = await fetch(endpoint, options)
+    
+        // // Get the response data from server as JSON.
+        // // If server returns the name submitted, that means the form works.
+        // const result = await response.json()
+        // alert(`Is this your full name: ${result.allValues}`)
+        
+    //     // var form_datas=JSON.parse(localStorage.getItem('form') || '[]') 
+    //     // var form_data={
+    //     //     name:allValues.name,
+    //     //     mail:allValues.mail,
+    //     //     sub:allValues.sub,
+    //     //     message:allValues.message
+    //     // }
+        
+    //     // form_datas.push(form_data)
+    //     // localStorage.setItem('form',JSON.stringify(form_datas))
+    //     console.log(allValues.name)
+        const allData={
             name:allValues.name,
             mail:allValues.mail,
             sub:allValues.sub,
             message:allValues.message
         }
+
+        try {
+            const {data}=await axios({
+                url:'/api/form',
+                method:'POST',
+                data: allData
+            })
+            console.log('Response :',data);}
+            catch(error){
+                console.log('Error',error)
+
+            }
         
-        form_datas.push(form_data)
-        localStorage.setItem('form',JSON.stringify(form_datas))
-        console.log(allValues.name)
-        
-        // axios.post(contact_url,{
+        // axios.post('/api/form',{
+        //     method:'POST',
         //     name:allValues.name,
         //     mail:allValues.mail,
         //     sub:allValues.sub,
@@ -134,11 +183,18 @@ const Contact=(props)=>
                 <h2 className='contact-title'>{props.title}</h2>
                 <form onSubmit={handleSubmit}>
                 <input onChange={changeHandler} name='name' value={allValues.name} type='text' placeholder='Your Name' required></input>
-                <br></br>
+                
+                {allValues.name.length===0 ? <div className='req-class'>Required</div> : null}
+                
                 <input onChange={changeHandler} name='mail' value={allValues.mail} type='email' placeholder='Your Email' required></input>
+                {allValues.mail.length===0 ? <div className='req-class'>Required</div> : null}
                 
                 <input onChange={changeHandler} name='sub' value={allValues.sub} type='text' placeholder='Subject'></input>
+                {allValues.sub.length===0 ? <div className='req-class'>Required</div> : null}
+                
                 <textarea onChange={changeHandler} name='message' value={allValues.message} placeholder='Message'></textarea>
+                {allValues.message.length===0 ? <div className='req-class'>Required</div> : null}
+                
                 <input className='contact-submit-button' onClick={submitMessage} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} style={{backgroundColor:buttonstyle ? 'white':'black'}} type='submit' placeholder='Send Me'></input>
 
                 </form>

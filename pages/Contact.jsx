@@ -140,28 +140,37 @@ const Contact=(props)=>
     //     // form_datas.push(form_data)
     //     // localStorage.setItem('form',JSON.stringify(form_datas))
     //     console.log(allValues.name)
-        const allData={
-            id:Date.now(),
+
+        axios.post(contact_url,{
             name:allValues.name,
             mail:allValues.mail,
             sub:allValues.sub,
             message:allValues.message
-        }
+        }).then((response)=>{
+            console.log(response)
+        })
+        // const allData={
+        //     id:Date.now(),
+        //     name:allValues.name,
+        //     mail:allValues.mail,
+        //     sub:allValues.sub,
+        //     message:allValues.message
+        // }
 
        
-            const data=await fetch('/api/form',{
-                method:'POST',
-                body:JSON.stringify({
-                    name:allValues.name,
-                    mail:allValues.mail,
-                    sub:allValues.sub,
-                    message:allValues.message}),
-                headers:{
-                    'Content-type':'application/json',
-                },
+        //     const data=await fetch('/api/form',{
+        //         method:'POST',
+        //         body:JSON.stringify({
+        //             name:allValues.name,
+        //             mail:allValues.mail,
+        //             sub:allValues.sub,
+        //             message:allValues.message}),
+        //         headers:{
+        //             'Content-type':'application/json',
+        //         },
                 
-            })
-            console.log('Response :',data);
+        //     })
+        //     console.log('Response :',data);
             // catch(error){
             //     console.log('Error',error)
 

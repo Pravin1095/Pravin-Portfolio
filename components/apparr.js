@@ -3,11 +3,11 @@ import ControlledCarousel from "./SkillHobby.jsx";
 import Educations from './Education.jsx'
 import ContactParent from './Contact.jsx'
 import FooterParent from './Footer.jsx'
-import Home from "./Home.jsx";
+import MyHome from "./MyHome.jsx";
 import Project from "./Projects.jsx";
 const app_arr=[
     {
-        child:<Home />,
+        child:<MyHome />,
         urlpath:'/'
     },
     {

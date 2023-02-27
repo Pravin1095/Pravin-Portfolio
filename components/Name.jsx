@@ -5,13 +5,11 @@ import navarr from "./navarr";
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
-
-
-
+import reducer from './reducer'
 
   
 const baseurl='http://api.github.com/users/Pravin1095'
-const nav_url='https://gist.githubusercontent.com/Pravin1095/c004366c7781821c4a7c21ba8bd4afc6/raw/838825c29f82e111d66b13e1cf434ab84e393448/Navarray.json'
+const nav_url='https://gist.githubusercontent.com/Pravin1095/c004366c7781821c4a7c21ba8bd4afc6/raw/77f51bba9e709f894e29f806676f566eee814cdf/Navarray.json'
 
 function NameParent() {
 
@@ -76,6 +74,9 @@ const Name = ({names,con,...props}) => {
       
       </Offcanvas>
       </div>
+      {/* const mapStateToProps=(state)=>({
+        fname:state.name,
+      }) */}
         <h1 className='name fontsize'>I am {posts.name}</h1>
         <div className='animate-h3'>
           <h3>A Fresher</h3>

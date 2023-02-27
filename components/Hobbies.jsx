@@ -1,5 +1,6 @@
 import React from 'react'
 import harr from './hobbyarr'
+import Image from 'next/image'
 
 const HobbyParent=()=>{
     return(
@@ -14,7 +15,7 @@ const Hobby=({harray})=>{
             <div>{harray.map(
                 (h,index)=>{
                     return <div className='hrow' key={index}>
-                    <img className={h.classType} src={h.imglink} alt={h.alter} />
+                    <Image className={h.classType} src={h.imglink} alt={h.alter} width={150} height={150} />
                 <h3>{h.title}</h3>
                 <p className='hobby-description'>{h.description}</p>
                 </div>

@@ -141,23 +141,31 @@ const Contact=(props)=>
     //     // localStorage.setItem('form',JSON.stringify(form_datas))
     //     console.log(allValues.name)
         const allData={
+            id:Date.now(),
             name:allValues.name,
             mail:allValues.mail,
             sub:allValues.sub,
             message:allValues.message
         }
 
-        try {
-            const {data}=await axios({
-                url:'/api/form',
+       
+            const data=await fetch('/api/form',{
                 method:'POST',
-                data: allData
+                body:JSON.stringify({
+                    name:allValues.name,
+                    mail:allValues.mail,
+                    sub:allValues.sub,
+                    message:allValues.message}),
+                headers:{
+                    'Content-type':'application/json',
+                },
+                
             })
-            console.log('Response :',data);}
-            catch(error){
-                console.log('Error',error)
+            console.log('Response :',data);
+            // catch(error){
+            //     console.log('Error',error)
 
-            }
+            // }
         
         // axios.post('/api/form',{
         //     method:'POST',

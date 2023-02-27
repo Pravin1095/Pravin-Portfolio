@@ -1,4 +1,4 @@
-import formData from "../formdata"
+import formData from "../../components/formdata"
 
 export default function FormData(req, res) {
 

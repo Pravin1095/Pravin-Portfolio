@@ -132,9 +132,14 @@
 
   }
 
-  .centre-image{
+  @media screen and (min-width:768px){.centre-image{
     background-image:linear-gradient(to right,lightblue 0%,lightblue 50%,pink 75%,pink 100%);
-    padding-top:10%
+    padding-top:10%;
+  }
+  }
+  @media screen and (max-width:768px) {
+    .centre-image{background-color:white};
+    
   }
   
 /*Intro component */

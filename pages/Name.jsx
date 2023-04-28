@@ -4,13 +4,14 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 // import navarr from "./navarr";
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from "next/image";
 import axios from "axios";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import ResumePage2 from "./ResumePage2";
 import Navbar from '../components/MyNavbar'
 import { connect } from 'react-redux'
-import { nameappendData } from '../components/action'
+import { nameappendData } from '../components/ReduxComponents/action'
 // import $ from "jquery";
 
 
@@ -40,10 +41,12 @@ function NameParent(props) {
   return (
     <>
     <Row>
-      <Col lg={6} className='train-class'>
+      <Col lg={5} className='train-class'>
           <Name names={props.NameComponent} con='Welcome !' clickval={h}/>  
       </Col>
-      <Col lg={6} className='train-class'><ResumePage2 sendF={sendFunction}/></Col>
+      {/* <Col lg={1} style={{backgroundColor:'#83e3db'}}><Col lg={1} style={{backgroundColor:'deeppink'}}><Image className="my-photo" src='/images/Photo.jpeg' alt="photo-img" width={200} height={250}/> </Col></Col> */}
+      <Col lg={2} className='centre-image'><Image className="my-photo" src='/images/Photo.jpeg' alt="photo-img" width={200} height={250}/></Col>
+      <Col lg={5} className='train-class'><ResumePage2 sendF={sendFunction}/></Col>
       </Row>
     </>
   );

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import edu from '../components/Eduarr';
 import MyNavbar from '../components/MyNavbar';
 import axios from 'axios';
-import { appendData } from '../components/action'
+import { appendData } from '../components/ReduxComponents/action'
 import { connect } from 'react-redux'
 
 

@@ -31,7 +31,7 @@ const ResumePage2=({sendF})=>{
         <p className='resume-about'>I am a Fresher who is very much interested in development role. You can download my Resume from below.</p>
         <Row>
         <Col lg={6}> <h2 className='res-title'>{resume}</h2></Col>
-        <Col lg={6}><a href='./Docs/Pravin A_Resume.pdf' download>
+        <Col lg={6}><a href='./Docs/Resume_Updated.pdf' download>
         <button onMouseOver={mouseHandle} onMouseOut={mouseOutHandle} style={{backgroundColor:isMouseOver ? 'white':'black'}} className='resume-button' onClick={()=>{chfunc('Resume downloaded');funcResume();}}  >Download Resume!</button>
         </a></Col></Row>
         </div>

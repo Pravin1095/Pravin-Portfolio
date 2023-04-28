@@ -26,31 +26,31 @@ useEffect(
   },[]);
 
 
-  let [style,setStyle]=useState('nav-but')
-  // const navItems=['Home','About','Education','Skill and Hobby','Contact','Footer']
-  let navStyles=['nav-but','about-nav','edu-nav','skill-nav','contact-nav','footer-nav']
+//   let [style,setStyle]=useState('nav-but')
+//   // const navItems=['Home','About','Education','Skill and Hobby','Contact','Footer']
+//   let navStyles=['nav-but','about-nav','edu-nav','skill-nav','contact-nav','footer-nav']
 
-let changeNavstyle=(buttonval)=>{
-  setStyle(style=navStyles[buttonval])
-  // console.log(buttonval)
-  // {console.log(navStyles[buttonval])}
+// let changeNavstyle=(buttonval)=>{
+//   setStyle(style=navStyles[buttonval])
+//   // console.log(buttonval)
+//   // {console.log(navStyles[buttonval])}
   
-  }
-  // {console.log(style)}
+//   }
+//   // {console.log(style)}
 
 
-useEffect(
-  ()=>{
-    setStyle(style=style)
-  }
-)
+// useEffect(
+//   ()=>{
+//     setStyle(style=style)
+//   }
+// )
 // console.log(style)
 
     return <div>
     
 
     {/* {console.log(style)} */}
-    <button onClick={handleShow} className={style}>
+    <button onClick={handleShow} className='nav-but'>
       <FontAwesomeIcon icon={faBars} style={{width:'50px',height:'50px'}}></FontAwesomeIcon>
       </button>
 

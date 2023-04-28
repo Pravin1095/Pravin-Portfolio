@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 import Head from 'next/head'
 import 'bootstrap/dist/css/bootstrap.css'
-import store from '../components/store'; 
+import store from '../components/ReduxComponents/store'; 
 import { Provider } from 'react-redux'
 
 

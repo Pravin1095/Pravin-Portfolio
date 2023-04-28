@@ -65,10 +65,13 @@ const Contact=(props)=>
     const submitMessage=()=>{
        
        setMsg('Hello '+allValues.name+ ' ! Your form has been submitted successfully! ThankYou! 😊')
-       {allValues.name.length===0 && setMsg('Please enter your name')}
-       {allValues.mail.length===0 && setMsg('Please enter your Email')}
-       {allValues.sub.length===0 && setMsg('Please enter the subject')}
        {allValues.message.length===0 && setMsg('Please enter the message')}
+       {allValues.sub.length===0 && setMsg('Please enter the subject')}
+       {allValues.mail.length===0 && setMsg('Please enter your Email')}
+       {allValues.name.length===0 && setMsg('Please enter your name')}
+       
+      
+       
 
     }
     
@@ -149,6 +152,7 @@ const Contact=(props)=>
         }).then((response)=>{
             console.log(response)
         })
+
         // const allData={
         //     id:Date.now(),
         //     name:allValues.name,
@@ -157,7 +161,9 @@ const Contact=(props)=>
         //     message:allValues.message
         // }
 
-       
+    //    const data =await fetch('https://script.google.com/macros/s/AKfycbwXn6tHhQsMeT2fEh8JesVADU0-hpIQLmRMliM07V_bMzRlCx5y8i558qHcGECAOYhEnQ/exec',{
+    //     method:'POST',
+    //     body:allValues
         //     const data=await fetch('/api/form',{
         //         method:'POST',
         //         body:JSON.stringify({

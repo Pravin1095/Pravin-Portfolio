@@ -60,9 +60,9 @@
   } */
 
 
-  #name{
+  /* #name{
     margin:0
-  }
+  } */
   #name .container-fluid{
     padding:10% 10% 28% 10%;
     
@@ -81,17 +81,17 @@
   .fontsize{
     font-size: 4rem;
     font-family: 'Montserrat', sans-serif;
-    
+    margin-top:15%;
     color: black;
     text-align: center;
     font-weight: bold;
   }
 
-  .name {
+  /* .name {
     
     margin-top:220px;
    
-  }
+  } */
   /* h2 {
     font-family: "Montserrat", sans-serif;
     
@@ -134,11 +134,11 @@
 
   @media screen and (min-width:768px){.centre-image{
     background-image:linear-gradient(to right,lightblue 0%,lightblue 50%,pink 75%,pink 100%);
-    padding-top:10%;
+    padding-top:15%;
   }
   }
   @media screen and (max-width:768px) {
-    .centre-image{background-color:white};
+    .centre-image{background-image:linear-gradient(to bottom,lightblue 0%,lightblue 50%,pink 75%,pink 100%);};
     
   }
   
@@ -354,18 +354,19 @@
   }
 
   .res-title{
-    font-family:"Sacramento", cursive;;
-    font-size:4rem;
+    font-family:'Sacromento', 'cursive';
+    font-size:3rem;
     font-weight:bold;
     height:1rem;
     padding-top:50%;
     text-align:center;
+    
   }
 
   .resume-about{
     font-family:'Montserrat', sans-serif;
     font-size:2rem;
-    margin-top:50px;
+    margin-top:26%;
     /* text-align:left; */
     margin-right:20px;
     color:darkorange

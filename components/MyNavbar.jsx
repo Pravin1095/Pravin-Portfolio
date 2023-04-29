@@ -70,7 +70,7 @@ useEffect(
         
        {navjson.map(
           (n,index)=>{
-            return <React.Fragment key={index}><Offcanvas.Title><Link href={n.link}><button onClick={e=>{changeNavstyle(e.target.value)}} value={n.val} className='nav-buttons' variant='dark'>{n.title}</button></Link></Offcanvas.Title></React.Fragment>
+            return <React.Fragment key={index}><Offcanvas.Title><Link href={n.link}><button value={n.val} className='nav-buttons' variant='dark'>{n.title}</button></Link></Offcanvas.Title></React.Fragment>
           })}
         
       

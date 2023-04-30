@@ -26,7 +26,7 @@ useEffect(
        <div><Row>{Mec_json.map(
             (mec,index)=>{
 
-             return   <React.Fragment key={index}><Col lg={6} ><Card bg='dark' text='light'>
+             return   <div key={index}><Col lg={6} ><Card bg='dark' text='light'>
         <Card.Img className='card-image' variant="top" src={mec.image}  />
         <Card.Body>
           <Card.Title>{mec.title}</Card.Title>
@@ -38,7 +38,7 @@ useEffect(
           <small className="text-muted">Last updated 3 mins ago</small>
         </Card.Footer> */}
         </Card>
-        </Col></React.Fragment>
+        </Col></div>
             }
         )}</Row></div> 
     </div>

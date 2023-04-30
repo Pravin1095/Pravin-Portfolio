@@ -15,7 +15,16 @@
 
   }
 
-  .nav-buttons{
+  @media screen and (min-width:768px){.nav-scroller{
+    width:25% !important;
+  }}
+  @media screen and (max-width:768px){
+    .nav-scroller{
+      width:50% !important;
+    }
+  }
+
+  @media screen and (min-width:768px){.nav-buttons{
     background-color:black;
     color:white;
     border-radius:100%;
@@ -25,9 +34,22 @@
     margin:5% 30% 5% 30%;
     width:30%;
     height:75%
-    
-    
-  }
+  }}
+
+  @media screen and (max-width:768px){
+      .nav-buttons{
+        background-color:black;
+    color:white;
+    border-radius:100%;
+    border:solid 3px red ;
+    text-align:center;
+    font-size:80%;
+    margin:5% 15% 5% 15%;
+    width:60%;
+    height:80%
+      }
+    }
+  
 
   .bg-nav{
     background-color: black;
@@ -177,8 +199,11 @@
   .skills-h2{
     padding-bottom:50px;
     text-align:center;
-    font-size:3rem;
+    font-size:80%;
   }
+
+
+
   
   .total-skills{
     padding-left:100px;
@@ -190,18 +215,29 @@
 
   .skill-head{
     color:black;
-    font-size:3rem;
+    font-size:80%;
   }
+
 
   .skill-title{
     font-family: "Montserrat", sans-serif;
-    font-size:2rem;
+    font-size:75%;
     color:black;
     display:inline;
     padding-left : 20px;
     padding-top:20px;
 
   }
+  /* @media screen and (max-width:768px){.skill-title{
+    font-family: "Montserrat", sans-serif;
+    font-size:75%;
+    color:black;
+    display:inline;
+    padding-left : 20px;
+    padding-top:20px;
+
+  }} */
+
 
   /*Education Component */
 
@@ -259,7 +295,7 @@
    text-align:right;
   }
 
-  .edu-button{
+  @media screen and (min-width:768px){.edu-button{
     margin-left:50%;
     background-color:black;
     color:white;
@@ -267,7 +303,18 @@
     height:25%;
     border-radius:10%;
     padding-left:5%;
-
+  }
+  }
+  @media screen and (max-width:768px){
+    .edu-button{
+      margin-left:50%;
+    background-color:black;
+    color:white;
+    width:50%;
+    height:100%;
+    border-radius:10%;
+    padding-left:5%;
+    }
   }
   .download-icon{
     padding-right:5%;
@@ -295,7 +342,7 @@
   .hobby-title{
     text-align:center;
     padding:50px 0 0;
-    font-size:3rem;
+    font-size:80%;
 
   }
 
@@ -313,6 +360,7 @@
 
   .hobby-description{
     padding-top:30px;
+    font-size:75%;
     
   }
 

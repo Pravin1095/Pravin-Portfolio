@@ -82,7 +82,7 @@ const Education = ({ title, icon, earray,edujson,edureduxarray}) => {
                             <p>{edua.year}</p>
                         </div>
                         <div className='col-lg-4'>
-                            <a href={edua.downloadlink} download><button className='edu-button'><FontAwesomeIcon className='download-icon' icon={faDownload}></FontAwesomeIcon>Download Certificate</button></a>
+                            <a href='#' download><button className='edu-button'><FontAwesomeIcon className='download-icon' icon={faDownload}></FontAwesomeIcon>Download Certificate</button></a>
                         </div>
                         </div>
                         <hr className='hor-line'></hr></React.Fragment>

@@ -28,10 +28,10 @@ const ResumePage2=({sendF})=>{
     return(
         <section id='resumeid'>
        <div className='container-fluid'>
-        <p className='resume-about'>I am a Fresher who is very much interested in development role. You can download my Resume from below.</p>
+        <p className='resume-about'>MERN stack developer with 3+ years of experience in ReactJs, NextJs, Redux, NodeJs, Mongodb. Please download my Resume from below.</p>
         <Row>
         <Col lg={6}> <h2 className='res-title'>{resume}</h2></Col>
-        <Col lg={6}><a href='./Docs/Resume_Updated.pdf' download>
+        <Col lg={6}><a href='./Docs/Pravin_FullStackDev.pdf' download>
         <button onMouseOver={mouseHandle} onMouseOut={mouseOutHandle} style={{backgroundColor:isMouseOver ? 'white':'black'}} className='resume-button' onClick={()=>{chfunc('Resume downloaded');funcResume();}}  >Download Resume!</button>
         </a></Col></Row>
         </div>

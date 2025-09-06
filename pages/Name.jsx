@@ -45,7 +45,7 @@ function NameParent(props) {
           <Name names={props.NameComponent} con='Welcome !' clickval={h}/>  
       </Col>
       {/* <Col lg={1} style={{backgroundColor:'#83e3db'}}><Col lg={1} style={{backgroundColor:'deeppink'}}><Image className="my-photo" src='/images/Photo.jpeg' alt="photo-img" width={200} height={250}/> </Col></Col> */}
-      <Col lg={2} className='centre-image'><Image className="my-photo" src='/images/Photo.jpeg' alt="photo-img" width={200} height={250}/></Col>
+      <Col lg={2} className='centre-image'><Image className="my-photo" src='/images/Photo.JPG' alt="photo-img" width={200} height={250}/></Col>
       <Col lg={5} className='train-class'><ResumePage2 sendF={sendFunction}/></Col>
       </Row>
     </>
@@ -55,13 +55,13 @@ function NameParent(props) {
 
 const Name = ({names,con,clickval}) => {
 
-  const [dynamicname, setName] = useState("A Fresher");
+  // const [dynamicname, setName] = useState("A Fresher");
 
-  const changeName = () => {
-    dynamicname === "A Fresher" && setName("A Developer");
-    dynamicname === "A Developer" && setName("A Fresher");
-  };
-  setInterval(changeName, 5000);
+  // const changeName = () => {
+  //   dynamicname === "A Fresher" && setName("A Developer");
+  //   dynamicname === "A Developer" && setName("A Fresher");
+  // };
+  // setInterval(changeName, 5000);
 
   // $('#dynamicfresher').fadeOut(3000)
 
@@ -138,7 +138,7 @@ const Name = ({names,con,clickval}) => {
 
         <h1 className='fontsize'>I am {names} </h1>
         <div className='animate-h3'>
-          <h3 id='dynamicfresher'>{dynamicname}</h3>
+          <h3 id='dynamicfresher'>FullStack(MERN) Developer</h3>
         </div>
         <h2 className='fontsizew'>{con}</h2>
         <h2>{clickval}</h2>

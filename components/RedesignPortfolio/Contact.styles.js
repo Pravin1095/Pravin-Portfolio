@@ -114,3 +114,9 @@ export const ToggleButton = styled.button`
     text-decoration: underline;
   }
 `;
+
+export const SuccessMsg = styled.div`
+color : #22c55e;
+font-size : 30px;
+font-family : "Motiva Sans";
+`

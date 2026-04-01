@@ -12,10 +12,10 @@ const SkillsList=({title,skillarray})=>{
 </IndividualSkillList>
 }
 
-const Skills = () => {
+const Skills = ({id}) => {
   return (
    
-    <SkillContainer>
+    <SkillContainer id={id}>
       <MySkills>My Skills</MySkills>
       <SkillListContainer>
       <SkillsList title='FrontEnd' skillarray={skillarr1} />

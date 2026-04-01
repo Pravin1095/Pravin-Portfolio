@@ -34,19 +34,34 @@ import { NavButtons, NavFields } from "./RedesignPortfolio/Home.styles.js";
 
 
 const App = () => {
-  const navFields = ["About Me", "Skills", "Hire Me"]
+  const navFields = [
+  { name: "About Me", id: "about" },
+  { name: "Skills", id: "skills" },
+  { name: "Hire Me", id: "contact" }
+];
+
+const handleScroll = (id) => {
+  const element = document.getElementById(id);
+  console.log("check element", element)
+  if (element) {
+    element.scrollIntoView({
+      behavior: 'smooth', 
+      block: 'start',     
+    });
+  }
+};
   return (
     <div className="App">
     <NavFields>
                     {navFields && navFields.map((navData, index)=>{
-                        const isHireButton = navData==="Hire Me"
-    return <NavButtons highlight={isHireButton} key={index}>{navData}</NavButtons>
+                        const isHireButton = navData.name==="Hire Me"
+    return <NavButtons onClick={() => handleScroll(navData.id)} highlight={isHireButton} key={index}>{navData.name}</NavButtons>
                     })}
                 </NavFields>
-    <Home />
-    <About />
-    <Skills />
-    <Contact />
+    <Home id="home" />
+    <About id="about" />
+    <Skills id="skills" />
+    <Contact id="contact" />
     {/* <RedesignPortfolio /> */}
     {/* <MyHome /> */}
     {/* <Project /> */}

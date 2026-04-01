@@ -4,7 +4,7 @@ import { fagithub, falinkedin, faCss3Alt, faJs, faReact, faPython, faJava, faLin
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faM } from "@fortawesome/free-solid-svg-icons";
 
-const Home= ()=>{
+const Home= ({id})=>{
 
     const navFields = ["About Me", "Skills", "Hire Me"]
     const iconFields = [{
@@ -30,7 +30,7 @@ const handleIconClick = ()=>{
     console.log("check")
 }
     return(
-        <HomeContainer>
+        <HomeContainer id={id}>
             <NameContainer>
                 <Hi>Hi, I am</Hi>
                 <Name>Pravin</Name>

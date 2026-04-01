@@ -50,7 +50,7 @@ export const NavFields = styled.div`
 display : flex;
 justify-content: right;
 width : 100%;
-gap : 10%;
+gap : 3%;
 margin-top : 2%;
 padding-right : 5%;
 position : fixed;
@@ -74,6 +74,11 @@ color : #000000;
     border: 1px solid #C4C4C4;
     border-radius : 25px;
     padding : 5px;
+    &:hover, &:focus {
+    background-color: #22c55e;
+    border-color: #22c55e;
+      color: #ffffff;
+  }
 `}
 
 `

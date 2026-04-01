@@ -2,16 +2,17 @@ import React from "react";
 import MyHome from "../pages/MyHome.jsx";
 import NameParent from "./Name.jsx";
 import IntroParent from "./Intro.jsx";
-import Skills from './Skills.jsx'
+// import Skills from './Skills.jsx'
 import BCarousel from "./BCarousel.jsx";
 import Educations from './Education.jsx'
-import ContactParent from './Contact.jsx'
+// import ContactParent from './Contact.jsx'
 import FooterParent from './Footer.jsx'
 import Eduarr from './Eduarr.jsx'
+import Home from "./RedesignPortfolio/Home.jsx";
 
 import Example from "./OffCanvasNav.jsx";
 import Trainee from "./Trainee.jsx";
-import Home from "./MyHome.jsx";
+// import Home from "./MyHome.jsx";
 import app_arr from "./apparr.js";
 import HobbyParent from "./Hobbies.jsx";
 import Project_Clg from "../pages/Project_Clg.jsx";
@@ -22,15 +23,32 @@ import Router from "react-router-dom"
 import Switch from "react-router-dom"
 import Route from "react-router-dom"
 import Redirect from "react-router-dom"
+import RedesignPortfolio from "../pages/RedesignPortfolio.jsx";
+import Skills from "./RedesignPortfolio/Skills.js";
+import Contact from "./RedesignPortfolio/Contact.jsx";
+import About from "./RedesignPortfolio/About.jsx";
+import { NavButtons, NavFields } from "./RedesignPortfolio/Home.styles.js";
  
 
 
 
 
 const App = () => {
+  const navFields = ["About Me", "Skills", "Hire Me"]
   return (
     <div className="App">
-    <MyHome />
+    <NavFields>
+                    {navFields && navFields.map((navData, index)=>{
+                        const isHireButton = navData==="Hire Me"
+    return <NavButtons highlight={isHireButton} key={index}>{navData}</NavButtons>
+                    })}
+                </NavFields>
+    <Home />
+    <About />
+    <Skills />
+    <Contact />
+    {/* <RedesignPortfolio /> */}
+    {/* <MyHome /> */}
     {/* <Project /> */}
    {/* <div>{app_arr.map(
       (apps,index)=>

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import axios, { all } from 'axios';
 import { ContactButton, ContactContainer, ContactForm, ContactInput, SuccessMsg } from './Contact.styles';
-
+import Loader from '../common/Loader';
 
 
 
@@ -12,6 +12,7 @@ const Contact=({id})=>{
 
     const url = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:8080"
     const[successMsg,setSuccessMsg]=useState('')
+    const [isLoading, setIsLoading] = useState(false);
     const [allValues, setAllValues] = useState({
         name: '',
         email: '',
@@ -31,13 +32,32 @@ const Contact=({id})=>{
 
      const handleSubmit=async(event)=>{
         event.preventDefault()
-        const response = await axios.post(`${url}/contact`, allValues)
-        setSuccessMsg(response?.data)
+        try{
+            setIsLoading(true)
+const response = await axios.post(`${url}/contact`, allValues)
+setSuccessMsg(response?.data)
+setIsLoading(true)
+        }
+        catch(err){
+            setIsLoading(true)
+            setSuccessMsg("Something went wrong")
+        }
+        finally{
+setIsLoading(false)
+setAllValues({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+     })
+        }
+        
+        
        
      }
-     console.log("check msg", successMsg)
     return(
             <ContactContainer id={id}>
+            {isLoading && <Loader />}
             {successMsg && successMsg==="Success" && <SuccessMsg>{"Your contact has been saved successfully. Thankyou!"}</SuccessMsg>}
             <div className='bottom'>
                 <h2 className='contact-title'>{"Let's get in touch!"}</h2>

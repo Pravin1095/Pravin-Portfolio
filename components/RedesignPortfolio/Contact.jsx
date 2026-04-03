@@ -10,6 +10,7 @@ import { ContactButton, ContactContainer, ContactForm, ContactInput, SuccessMsg 
 
 const Contact=({id})=>{
 
+    console.log("check env", process.env.NEXT_PUBLIC_BACKEND_URL)
     const url = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:8080"
     const[successMsg,setSuccessMsg]=useState('')
     const [allValues, setAllValues] = useState({

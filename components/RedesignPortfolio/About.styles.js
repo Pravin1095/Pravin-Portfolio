@@ -9,14 +9,21 @@ font-size : 20px;
 background-color: #C4C4C4;
 flex-direction : column;
 gap: 10px;
+@media (max-width: 768px) {
+    height : 100%;
+  }
 `
 
 export const AboutText = styled.div`
 width : 75%;
 font-family : "Motiva Sans";
-`
-export const AboutHeader = styled.h2`
 
+
+`
+export const AboutHeader = styled.h1`
+@media (max-width: 768px) {
+    margin-top : 50px;
+  }
 `
 
 export const ResumeText = styled.p`

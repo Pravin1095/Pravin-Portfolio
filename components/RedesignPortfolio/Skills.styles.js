@@ -7,7 +7,9 @@ flex-direction : column;
 height: 600px;
 color : #C4C4C4;
 align-items : center;
-${'' /* justify-content : center; */}
+@media (max-width: 768px) {
+    height : 100%;
+  }
 
 `
 
@@ -38,6 +40,11 @@ margin-top : 2%;
 ${'' /* align-items : center; */}
 justify-content : center;
 width : 100%;
+@media (max-width: 768px) {
+    flex-direction : column;
+    align-items : center;
+    margin-bottom : 10%;
+  }
 `
 
 export const IndividualSkillList = styled.div`

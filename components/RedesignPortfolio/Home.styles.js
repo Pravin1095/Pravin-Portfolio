@@ -4,6 +4,12 @@ export const HomeContainer = styled.div`
 display : flex;
 height: 600px;
 background-color: #C4C4C4;
+@media (max-width: 768px) {
+    flex-direction : column;
+    width : 100%;
+    height: 100%;
+    gap : 50px;
+  }
 `
 
 export const Hi = styled.div`
@@ -23,6 +29,9 @@ align-items: center;
 justify-content : center;
 background-color: #C4C4C4;
 width: 50%;
+@media (max-width: 768px) {
+    width : 100%;
+  }
 
 
 `
@@ -36,7 +45,7 @@ width: 50%;
 clip-path: polygon(5% 0%, 100% 0%, 100% 100%, 0% 100%);
 gap: 25%;
 @media (max-width: 768px) {
-    width: 50%;
+    width: 100%;
     clip-path: none; 
   }
 `
@@ -57,6 +66,9 @@ position : fixed;
 right : 0;
 top : 0;
 z-index : 1000;
+@media (max-width: 768px) {
+    display : none;
+  }
 
 `
 

@@ -62,6 +62,9 @@ export const ContactForm = styled.form`
   flex-direction: column;
   gap: 1rem;
   width : 150%;
+  @media (max-width: 768px) {
+    width : 100%;
+  }
 `;
 
 export const ContactInput = styled.input`
